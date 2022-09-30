@@ -1,9 +1,26 @@
 button {
   color:black;
   background-color:#3498DB;
-  border-style 
+  border-style:solid;
+  border-color: #191970;
+  border-width: 4px
+  
+  
+  
 }
 span{
   color:black;
-  background-color:#3498DB;
+  background-color:blue;
 }
+h1 {
+  color:black;
+  background-color:#8A2BE2;
+  border:solid black;
+  
+}
+p {
+  color:black;
+  border:solid deeppurple;
+  
+}
+
