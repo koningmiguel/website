@@ -3,7 +3,7 @@ button {
   background-color:#8A2BE2;
   border-style:solid;
   border-color: #000000;
-  border-width: 3px;
+  border-width: 4px;
  margin: 4px;
   
   
@@ -17,9 +17,10 @@ h1 {
   background-color:#8A2BE2;
   border-style:solid;
   border-color: #000000;
-  border-width: 3px;
-
-  align-content: center;
+  border-width: 4px;
+  margin: 2px 510px;
+  display: flex;
+ justify-content: center;
   
 }
 p {
@@ -27,7 +28,7 @@ p {
   background-color:#8A2BE2;
   border-style:solid;
   border-color: #000000;
-  border-width: 3px;
+  border-width: 4px;
  margin: 2px 4px;
   
 }
