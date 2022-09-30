@@ -1,10 +1,10 @@
 button {
   color:black;
-  background-color:#3498DB;
+  background-color:#8A2BE2;
   border-style:solid;
-  border-color: #191970;
-  border-width: 4px
-  
+  border-color: #000000;
+  border-width: 3px;
+ margin: 4px;
   
   
 }
@@ -15,12 +15,20 @@ span{
 h1 {
   color:black;
   background-color:#8A2BE2;
-  border:solid black;
+  border-style:solid;
+  border-color: #000000;
+  border-width: 3px;
+
+  align-content: center;
   
 }
 p {
-  color:black;
-  border:solid deeppurple;
+ color:black;
+  background-color:#8A2BE2;
+  border-style:solid;
+  border-color: #000000;
+  border-width: 3px;
+ margin: 2px 4px;
   
 }
 
