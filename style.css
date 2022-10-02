@@ -29,8 +29,9 @@ p {
   border-style:solid;
   border-color: #000000;
   border-width: 4px;
- margin: 2px 125px;
-
+ margin: 2px 125px; 
+}
+body {
+  background-image: repeating-conic-gradient(purple 2%, black 5%);
   
 }
-
