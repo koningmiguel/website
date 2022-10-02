@@ -32,6 +32,6 @@ p {
  margin: 2px 125px; 
 }
 body {
-  background-image: repeating-conic-gradient(purple 2%, black 5%);
+background-image: radial-gradient(purple, black);
   
 }
