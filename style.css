@@ -45,3 +45,8 @@ ol {
   margin: 2px 125px;
   
 }
+a {
+  a:link {
+  color: red;
+  
+}
