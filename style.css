@@ -12,17 +12,7 @@ span{
   color:black;
   background-color:blue;
 }
-h1 {
-  color:black;
-  background-color:#8A2BE2;
-  border-style:solid;
-  border-color: #000000;
-  border-width: 4px;
-  margin: 2px 510px;
-  display: flex;
- justify-content: center;
-  
-}
+
 p {
  color:black;
   background-color:#8A2BE2;
@@ -56,4 +46,73 @@ a:hover {
   background-repeat:no-repeat;
   background-size: 1906px 1080px;
 }
-
+.home {
+  color:black;
+  background-color:#8A2BE2;
+  border-style:solid;
+  border-color: #000000;
+  border-width: 4px;
+  margin: 2px 510px;
+  display: flex;
+ justify-content: center;
+}
+.wiebenik {
+  color:black;
+  background-color:#8A2BE2;
+  border-style:solid;
+  border-color: #000000;
+  border-width: 4px;
+  margin: 2px 510px;
+  display: flex;
+ justify-content: center;
+}
+.hobbys {
+  color:black;
+  background-color:#8A2BE2;
+  border-style:solid;
+  border-color: #000000;
+  border-width: 4px;
+  margin: 2px 510px;
+  display: flex;
+ justify-content: center;
+}
+.links {
+  color:black;
+  background-color:#8A2BE2;
+  border-style:solid;
+  border-color: #000000;
+  border-width: 4px;
+  margin: 2px 510px;
+  display: flex;
+ justify-content: center;
+}
+.contact {
+  color:black;
+  background-color:#8A2BE2;
+  border-style:solid;
+  border-color: #000000;
+  border-width: 4px;
+  margin: 2px 510px;
+  display: flex;
+ justify-content: center;
+}
+.imagegallery {
+  color:black;
+  background-color:#8A2BE2;
+  border-style:solid;
+  border-color: #000000;
+  border-width: 4px;
+  margin: 2px 510px;
+  display: flex;
+ justify-content: center;
+}
+.opdrachten {
+  color:black;
+  background-color:#8A2BE2;
+  border-style:solid;
+  border-color: #000000;
+  border-width: 4px;
+  margin: 2px 510px;
+  display: flex;
+ justify-content: center;
+}
