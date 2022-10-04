@@ -32,11 +32,6 @@ p {
  margin: 2px 125px; 
 }
 
-body {.achtergrond{
-  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/istockphoto-1287732581-170667a.jpg?v=1664782975152);
-  background-repeat: no-repeat;
-  background-size: 1000px 100px;
-}
 ol {
   color:black;
   background-color:#8A2BE2;
