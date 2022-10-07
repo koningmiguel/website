@@ -6,8 +6,19 @@ button {
   border-width: 4px;
  margin: 4px;
   
-  
+  .container
+  {
+  position: absolute;
+    top50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+  .button
+  {
+    position: relative;
+  
+    
+    
 span{
   color:black;
   background-color:blue;
