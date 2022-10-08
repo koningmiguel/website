@@ -19,7 +19,7 @@ li a, .dropbtn {
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-  background-color: 8A2BE2;
+  background-color: #8A2BE2;
 }
 
 li.dropdown {
@@ -92,7 +92,7 @@ a:hover {
   border-style:solid;
   border-color: #000000;
   border-width: 4px;
-  margin: 2px 510px;
+  margin: 2px 650px;
   display: flex;
  justify-content: center;
 }
@@ -102,7 +102,7 @@ a:hover {
   border-style:solid;
   border-color: #000000;
   border-width: 4px;
-  margin: 2px 510px;
+  margin: 2px 810px;
   display: flex;
  justify-content: center;
 }
