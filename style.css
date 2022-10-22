@@ -74,14 +74,6 @@ p {
  margin: 2px 125px; 
 }
 
-ol {
-  color:black;
-  background-color:#8A2BE2;
-  border-style:solid;
-  border-color: #000000;
-  border-width: 4px;
-  margin: 2px 125px;
-}
 .home {
   color:black;
   background-color:#8A2BE2;
@@ -118,7 +110,7 @@ ol {
   border-style:solid;
   border-color: #000000;
   border-width: 4px;
-  margin: 2px 510px;
+  margin: 2px 810px;
   display: flex;
  justify-content: center;
 }
@@ -178,11 +170,21 @@ ol {
   background-size: 1920px 1080px;
 
 }
-
-
-
-
-
+#Contact {
+  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/8ea1198d59d3321f0a429edbfd913b51.jpg?v=1666437652861);
+  background-repeat:no-repeat;
+  background-size: 1920px 1080px;
+}
+#IG {
+  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds_181624-11068.webp?v=1666438025570);
+  background-repeat:no-repeat;
+  background-size: 1920px 1080px;
+}
+#opdrachten {
+  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds-wallpapers_181624-9331.webp?v=1666438170758);
+  background-repeat:no-repeat;
+  background-size: 1920px 1080px;
+}
 
 h4 {text-align: center;}
 
