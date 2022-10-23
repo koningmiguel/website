@@ -79,6 +79,7 @@ p {
   border-width: 4px;
   margin: 2px 125px;
 }
+/* https://www.w3schools.com/css/css_colors.asp */
 
 .home {
   color: black;
@@ -86,7 +87,7 @@ p {
   border-style: solid;
   border-color: #000000;
   border-width: 4px;
-  margin: 2px 510px;
+  margin: 2px 660px;
   display: flex;
   justify-content: center;
 }
@@ -96,7 +97,7 @@ p {
   border-style: solid;
   border-color: #000000;
   border-width: 4px;
-  margin: 2px 670px;
+  margin: 2px 810px;
   display: flex;
   justify-content: center;
 }
@@ -150,7 +151,7 @@ p {
   display: flex;
   justify-content: center;
 }
-/* This is a single-line comment */
+/* https://www.w3schools.com/html/html_classes.asp */
 #index {
   background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/10906277.jpg?v=1664883446264);
   background-repeat: no-repeat;
@@ -189,7 +190,7 @@ p {
   background-size: 1920px 1080px;
 }
 
-/* This is a single-line comment */
+/* https://www.w3schools.com/html/html_id.asp */
 
 h4 {
   text-align: center;
