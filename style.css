@@ -66,6 +66,7 @@ li.dropdown {
   display: block;
 }
 /* ik heb dit van wouter gedaan */
+
 span {
   color: black;
   background-color: blue;
@@ -107,7 +108,7 @@ p {
   border-style: solid;
   border-color: #000000;
   border-width: 4px;
-  margin: 2px 510px;
+  margin: 2px 810px;
   display: flex;
   justify-content: center;
 }
@@ -127,7 +128,7 @@ p {
   border-style: solid;
   border-color: #000000;
   border-width: 4px;
-  margin: 2px 510px;
+  margin: 2px 710px;
   display: flex;
   justify-content: center;
 }
@@ -175,7 +176,7 @@ p {
   background-size: 1920px 1080px;
 }
 #Contact {
-  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/8ea1198d59d3321f0a429edbfd913b51.jpg?v=1666437652861);
+  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/Sky_with_Sun_Background-1481.jpg?v=1666528216150);
   background-repeat: no-repeat;
   background-size: 1920px 1080px;
 }
