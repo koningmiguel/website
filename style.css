@@ -7,22 +7,24 @@ a:visited {
 a:hover {
   color: red;
 }
+/* https://www.w3schools.com/css/css_link.asp */
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #8A2BE2;
-    display: flex;
- justify-content: center;
+  background-color: #8a2be2;
+  display: flex;
+  justify-content: center;
 }
 
 li {
   float: left;
 }
 
-li a, .dropbtn {
+li a,
+.dropbtn {
   display: inline-block;
   color: black;
   text-align: center;
@@ -30,8 +32,9 @@ li a, .dropbtn {
   text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
-  background-color: #8A2BE2;
+li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #8a2be2;
 }
 
 li.dropdown {
@@ -41,9 +44,9 @@ li.dropdown {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #8A2BE2;
+  background-color: #8a2be2;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -55,139 +58,144 @@ li.dropdown {
   text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #8A2BE2;}
+.dropdown-content a:hover {
+  background-color: #8a2be2;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
-span{
-  color:black;
-  background-color:blue;
+/* ik heb dit van wouter gedaan */
+span {
+  color: black;
+  background-color: blue;
 }
 
 p {
- color:black;
-  background-color:#8A2BE2;
-  border-style:solid;
+  color: black;
+  background-color: #8a2be2;
+  border-style: solid;
   border-color: #000000;
   border-width: 4px;
- margin: 2px 125px; 
+  margin: 2px 125px;
 }
 
 .home {
-  color:black;
-  background-color:#8A2BE2;
-  border-style:solid;
+  color: black;
+  background-color: #8a2be2;
+  border-style: solid;
   border-color: #000000;
   border-width: 4px;
   margin: 2px 510px;
   display: flex;
- justify-content: center;
+  justify-content: center;
 }
 .wiebenik {
-  color:black;
-  background-color:#8A2BE2;
-  border-style:solid;
+  color: black;
+  background-color: #8a2be2;
+  border-style: solid;
   border-color: #000000;
   border-width: 4px;
   margin: 2px 670px;
   display: flex;
- justify-content: center;
+  justify-content: center;
 }
 .hobbys {
-  color:black;
-  background-color:#8A2BE2;
-  border-style:solid;
+  color: black;
+  background-color: #8a2be2;
+  border-style: solid;
   border-color: #000000;
   border-width: 4px;
   margin: 2px 510px;
   display: flex;
- justify-content: center;
+  justify-content: center;
 }
 .links {
-  color:black;
-  background-color:#8A2BE2;
-  border-style:solid;
+  color: black;
+  background-color: #8a2be2;
+  border-style: solid;
   border-color: #000000;
   border-width: 4px;
   margin: 2px 810px;
   display: flex;
- justify-content: center;
+  justify-content: center;
 }
 .contact {
-  color:black;
-  background-color:#8A2BE2;
-  border-style:solid;
+  color: black;
+  background-color: #8a2be2;
+  border-style: solid;
   border-color: #000000;
   border-width: 4px;
   margin: 2px 510px;
   display: flex;
- justify-content: center;
+  justify-content: center;
 }
 .imagegallery {
-  color:black;
-  background-color:#8A2BE2;
-  border-style:solid;
+  color: black;
+  background-color: #8a2be2;
+  border-style: solid;
   border-color: #000000;
   border-width: 4px;
   margin: 2px 510px;
   display: flex;
- justify-content: center;
+  justify-content: center;
 }
 .opdrachten {
-  color:black;
-  background-color:#8A2BE2;
-  border-style:solid;
+  color: black;
+  background-color: #8a2be2;
+  border-style: solid;
   border-color: #000000;
   border-width: 4px;
   margin: 2px 510px;
   display: flex;
- justify-content: center;
+  justify-content: center;
 }
-
+/* This is a single-line comment */
 #index {
-   background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/10906277.jpg?v=1664883446264);
-  background-repeat:no-repeat;
+  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/10906277.jpg?v=1664883446264);
+  background-repeat: no-repeat;
   background-size: 1920px 1080px;
 }
-  #WBI {
+#WBI {
   background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/2322303.jpg?v=1666436971548);
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: 1920px 1080px;
-
 }
 
 #Hobby {
   background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/2322356.jpg?v=1666437180706);
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: 1920px 1080px;
-
 }
 
 #Links {
   background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/istockphoto-1191658515-170667a.jpg?v=1666438448383);
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: 1920px 1080px;
-
 }
 #Contact {
   background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/8ea1198d59d3321f0a429edbfd913b51.jpg?v=1666437652861);
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: 1920px 1080px;
 }
 #IG {
   background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds_181624-11068.webp?v=1666438025570);
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: 1920px 1080px;
 }
 #opdrachten {
   background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds-wallpapers_181624-9331.webp?v=1666438170758);
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: 1920px 1080px;
 }
 
-h4 {text-align: center;}
+/* This is a single-line comment */
+
+h4 {
+  text-align: center;
+}
 
 h4 {
   font-size: 30px;
 }
+/* Ik heb dit met wouter gedaan */
