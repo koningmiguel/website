@@ -203,8 +203,15 @@ h2 {
 h4 {
   text-align: center;
 }
-
-h4 {
+ {
   font-size: 30px;
 }
 /* Ik heb dit met wouter gedaan */
+h3 {
+  color: black;
+  background-color: #bf79db;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 4px;
+  margin: 2px 125px;
+}
