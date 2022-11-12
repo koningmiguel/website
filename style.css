@@ -207,11 +207,12 @@ h4 {
   font-size: 30px;
 }
 /* Ik heb dit met wouter gedaan */
-h3 {
+h2 {
   color: black;
   background-color: #bf79db;
   border-style: solid;
   border-color: #000000;
   border-width: 4px;
   margin: 2px 125px;
+
 }
