@@ -81,14 +81,7 @@ p {
   margin: 2px 125px;
 }
 /* https://www.w3schools.com/css/css_colors.asp */
-h2 {
-  color: black;
-  background-color: #bf79db;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 4px;
-  margin: 2px 125px;
-}
+
 .home {
   color: black;
   background-color: #bf79db;
