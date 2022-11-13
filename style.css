@@ -186,7 +186,7 @@ p {
   background-size: 1920px 1080px;
 }
 #opdrachten {
-  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/HD-wallpaper-china-valley-forest-lamp-house-china-beautiful-magic-trees-asia-fog-palms-lights-valley-temple-nature-morning-kingdom.jpg?v=1668278166590);
+  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/gradient-purple-hexagonal-background_23-2148965956.webp?v=1668333057428);
   background-repeat: no-repeat;
   background-size: 1920px 2200px;
 }
@@ -207,5 +207,11 @@ h2 {
   border-color: #000000;
   border-width: 4px;
   margin: 2px 125px;
-
+ display: flex;
+  justify-content: center;
+}
+img {
+  
+display: flex;
+  justify-content: center;
 }
