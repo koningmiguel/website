@@ -46,7 +46,7 @@ li.dropdown {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #ffffff11;
+  background-color: #ffffff;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -109,7 +109,7 @@ span {
 }
 .links {
   color: black;
-  background-color: #4F067F;
+  background-color: #9D33E2;
   border-style: solid;
   border-color: #000000;
   border-width: 4px;
@@ -119,7 +119,7 @@ span {
 }
 .contact {
   color: black;
-  background-color: #bf79db;
+  background-color: #3E8DD4;
   border-style: solid;
   border-color: #000000;
   border-width: 4px;
