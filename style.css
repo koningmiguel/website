@@ -1,7 +1,7 @@
 
 
-in a:link {
-  color: red;
+a {
+  color: White;
 }
 a:visited {
   color: black;
@@ -212,4 +212,8 @@ h2 {
   display: flex;
   justify-content: center;
   
+}
+
+b{
+  Color:white;
 }
