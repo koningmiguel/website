@@ -199,15 +199,12 @@ h4 {
 p {
 color:white;
   
-font-family:verdana;
+font-family: verdana;
   font-size: 20px;
 }
 
 h2 {
   display: flex;
   justify-content: center;
-  
-}
-  
   
 }
