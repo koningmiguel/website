@@ -16,7 +16,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #bf79db;
+  background-color: #ffffff00;
   display: flex;
   justify-content: center;
 }
@@ -36,7 +36,7 @@ li a,
 
 li a:hover,
 .dropdown:hover .dropbtn {
-  background-color: #bf79db;
+  background-color: #ffffff00;
 }
 
 li.dropdown {
@@ -46,7 +46,7 @@ li.dropdown {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #ffffff;
+  background-color: #ffffff11;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -61,7 +61,7 @@ li.dropdown {
 }
 
 .dropdown-content a:hover {
-  background-color: #bf79db;
+  background-color: #ffffff00;
 }
 
 .dropdown:hover .dropdown-content {
@@ -79,7 +79,7 @@ span {
 
 .home {
   color: black;
-  background-color: #bf79db;
+  background-color: #1469BF;
   border-style: solid;
   border-color: #000000;
   border-width: 4px;
@@ -89,7 +89,7 @@ span {
 }
 .wiebenik {
   color: black;
-  background-color: #bf79db;
+  background-color: #8E43BF;
   border-style: solid;
   border-color: #000000;
   border-width: 4px;
@@ -109,7 +109,7 @@ span {
 }
 .links {
   color: black;
-  background-color: #bf79db;
+  background-color: #4F067F;
   border-style: solid;
   border-color: #000000;
   border-width: 4px;
@@ -197,7 +197,17 @@ h4 {
 /* Ik heb dit met wouter gedaan */
 
 p {
-color:white  
+color:white;
+  
+font-family:verdana;
+  font-size: 20px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  
+}
   
   
 }
