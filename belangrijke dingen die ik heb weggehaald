@@ -1,0 +1,26 @@
+p {
+  color: black;
+  background-color: #bf79db;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 4px;
+  margin: 2px 125px;
+}
+
+h2 {
+  color: black;
+  background-color: #bf79db;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 4px;
+  margin: 2px 125px;
+ display: flex;
+  justify-content: center;
+}
+
+
+img {
+  
+display: flex;
+  justify-content: center;
+}

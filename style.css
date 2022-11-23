@@ -74,14 +74,6 @@ span {
   background-color: blue;
 }
 
-p {
-  color: black;
-  background-color: #bf79db;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 4px;
-  margin: 2px 125px;
-}
 
 /* https://www.w3schools.com/css/css_colors.asp */
 
@@ -157,7 +149,7 @@ p {
 }
 /* https://www.w3schools.com/html/html_classes.asp */
 #index {
-  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/10906277.jpg?v=1664883446264);
+  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/1542409.jpg?v=1669218654254);
   background-repeat: no-repeat;
   background-size: 1920px 1080px;
 }
@@ -203,18 +195,9 @@ h4 {
   font-size: 20px;
 }
 /* Ik heb dit met wouter gedaan */
-h2 {
-  color: black;
-  background-color: #bf79db;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 4px;
-  margin: 2px 125px;
- display: flex;
-  justify-content: center;
-}
-img {
+
+p {
+color:white  
   
-display: flex;
-  justify-content: center;
+  
 }
