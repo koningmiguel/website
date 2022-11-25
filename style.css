@@ -78,72 +78,37 @@ span {
 /* https://www.w3schools.com/css/css_colors.asp */
 
 .home {
-  color: black;
-  background-color: #1469BF;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 4px;
-  margin: 2px 660px;
+  color: white;
   display: flex;
   justify-content: center;
 }
 .wiebenik {
-  color: black;
-  background-color: #0E0D5B;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 4px;
-  margin: 2px 810px;
+  color: white;
   display: flex;
   justify-content: center;
 }
 .hobbys {
-  color: black;
-  background-color: #1469BF;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 4px;
-  margin: 2px 810px;
+  color: white;
   display: flex;
   justify-content: center;
 }
 .links {
-  color: black;
-  background-color: #0E0D5B;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 4px;
-  margin: 2px 810px;
+  color: white;
   display: flex;
   justify-content: center;
 }
 .contact {
-  color: black;
-  background-color: #1469BF;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 4px;
-  margin: 2px 710px;
+  color: white;
   display: flex;
   justify-content: center;
 }
 .imagegallery {
-  color: black;
-  background-color: #1469BF;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 4px;
-  margin: 2px 510px;
+  color: white;
   display: flex;
   justify-content: center;
 }
 .opdrachten {
-  color: black;
-  background-color: #1469BF;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 4px;
-  margin: 2px 510px;
+  color: white;
   display: flex;
   justify-content: center;
 }
@@ -188,15 +153,13 @@ span {
   #Geschiedenis {
   background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/image_2022-11-23_165120596.png?v=1669218682391);
   background-repeat: no-repeat;
-  background-size: 1920px 1080px;
+  background-size: 1920px 1280px;
 }
 
 /* https://www.w3schools.com/html/html_id.asp */
 
 h4 {
   text-align: center;
-}
- {
   font-size: 10px;
 }
 /* Ik heb dit met wouter gedaan */
@@ -211,6 +174,8 @@ font-family: sans-serif;
 h2 {
   display: flex;
   justify-content: center;
+  color: white;
+  font-size: 30px;
   
 }
 
