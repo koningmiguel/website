@@ -24,3 +24,8 @@ img {
 display: flex;
   justify-content: center;
 }
+
+#index {
+  background: url(https://cdn.glitch.me/8b036c8e-3ff9-40c1-a39d-847565c3b20d/purple-ocean-moewalls.com.mp4?v=1669381960432);
+  background-repeat: no-repeat;
+  background-size: 1920px 1080px;
