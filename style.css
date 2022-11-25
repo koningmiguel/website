@@ -113,10 +113,12 @@ span {
   justify-content: center;
 }
 /* https://www.w3schools.com/html/html_classes.asp */
-#index {
-  z-index: -1000;
-}
 
+#index {
+  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/1542409.jpg?v=1669218654254);
+  background-repeat: no-repeat;
+  background-size: 1920px 1080px;
+}
 #WBI {
   background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/image_2022-11-23_195454624.png?v=1669229697205);
   background-repeat: no-repeat;
