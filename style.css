@@ -198,7 +198,7 @@ b{
   font-size: 30px;
 }
 
-.i1 {
+.item1 {
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
@@ -207,7 +207,7 @@ b{
   
 }
 
-.i17 {
+.item17 {
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
@@ -217,7 +217,7 @@ b{
   grid-column-end: 3;
 }
 
- .i19{
+ .item19{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
@@ -234,7 +234,7 @@ b{
   text-align: center;
 }
 
-.i21{
+.item21{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
@@ -242,7 +242,7 @@ b{
   text-align: center;
 }
 
-.i22{
+.item22{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
@@ -250,7 +250,7 @@ b{
   text-align: center;
 }
 
-.i18{
+.item18{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
@@ -261,7 +261,7 @@ b{
    
 }
 
-.i2{
+.item2{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
@@ -269,7 +269,7 @@ b{
   text-align: center;
 }
 
-.i3{
+.item3{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
@@ -278,7 +278,7 @@ b{
   grid-column: 3 / span 2
 }
 
-.i4{
+.item4{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
@@ -288,7 +288,7 @@ b{
   grid-column-end: 7
 }
 
-.i5{
+.item5{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
@@ -298,14 +298,14 @@ b{
   grid-column-end: 9;
 }
 
-.i6{
+.item6{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
   font-size: 30px;
   text-align: center;
 }
-.i7{
+.item7{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
@@ -313,7 +313,7 @@ b{
   text-align: center;
   
 }
-.i8{
+.item8{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
@@ -321,7 +321,7 @@ b{
   text-align: center;
   grid-column: 3 / span 2
 }
-.i9{
+.item9{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
@@ -330,7 +330,7 @@ b{
   grid-column-start: 5;
   grid-column-end: 7
 }
-.i10{
+.item10{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
@@ -338,7 +338,7 @@ b{
   text-align: center;
   
 }
-.i11{
+.item11{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
@@ -346,7 +346,7 @@ b{
   text-align: center;
   
 }
-.i12{
+.item12{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
@@ -355,7 +355,7 @@ b{
   grid-column-start: 1;
   grid-column-end: 3;
 }
-.i13{
+.item13{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
@@ -364,14 +364,14 @@ b{
   grid-column-start: 3;
   grid-column-end: 5;
 }
-.i14{
+.item14{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
   font-size: 30px;
   text-align: center;
 }
-.i15{
+.item15{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
@@ -379,7 +379,7 @@ b{
   text-align: center;
   
 }
-.i16{
+.item16{
   background-color: lightblue;
   border: 1px solid black;
   padding: 10px;
