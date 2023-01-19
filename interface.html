@@ -9,8 +9,7 @@
   <style>
   .grid-container {
   display: grid;
-  grid-template-columns: 10% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20%;
+  grid-template-columns: 20% auto auto auto;
   gap: 10px;
   background-color: #2196F3;
   padding: 10px;
@@ -23,6 +22,10 @@
   font-size: 30px;
 }
 
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
 
 </style>
 </head>
@@ -64,7 +67,9 @@
   <div class="grid-item">12</div>
   <div class="grid-item">13</div>  
   <div class="grid-item">14</div>  
-  <div class="grid-item">15</div>  
+  <div class="grid-item">15</div>
+    <div class="grid-item">16</div>  
+    
   </body>
 </html>
 
