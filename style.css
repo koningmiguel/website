@@ -198,10 +198,196 @@ b{
   font-size: 30px;
 }
 
-.item1 {
-  grid-row: 1 / 3;
+.i1 {
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  
 }
 
+.i17 {
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+ .i19{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+   
+}
+
+.item20{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.i21{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.i22{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.i18{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+   grid-column-start: 3;
+  grid-column-end: 5;
+   
+}
+
+.i2{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.i3{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  grid-column: 3 / span 2
+}
+
+.i4{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  grid-column-start: 5;
+  grid-column-end: 7
+}
+
+.i5{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+ grid-column-start: 7;
+  grid-column-end: 9;
+}
+
+.i6{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+.i7{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  
+}
+.i8{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  grid-column: 3 / span 2
+}
+.i9{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  grid-column-start: 5;
+  grid-column-end: 7
+}
+.i10{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  
+}
+.i11{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  
+}
+.i12{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.i13{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+.i14{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+.i15{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  
+}
+.i16{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+   grid-column-start: 7;
+  grid-column-end: 9;
+}
 
 
 
