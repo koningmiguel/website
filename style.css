@@ -390,5 +390,31 @@ b{
 
 
 
+fieldset {
+  width: 500px;
+}
 
+legend {
+  font-size: 20px;
+  color: White
+}
 
+label.field {
+  text-align: right;
+  width: 100px;
+  float: left;
+  font-weight: bold;
+}
+
+input.textbox-300 {
+  width: 300px;
+  float: left;
+}
+
+fieldset br {
+  clear: both;
+  padding: 5px;
+}
+
+plaats {color:white;
+}
