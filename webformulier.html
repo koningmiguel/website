@@ -32,16 +32,16 @@
     #myFieldset {
         color: white;
     }
-</style>
-<form action="" method="get">
-   <fieldset id="myFieldset">
-       <legend>Persoonsgegevens</legend>
-       Naam: <input type="text" id="Naam" name="Naam"><br />
-       Adres: <input type="text" id="Adres" name="Adres"><br />
-       Postcode: <input type="text" id="Postcode" name="Postcode"><br />
-       Plaats: <input type="text" id="Plaats" name="Plaats"><br />
-   </fieldset>
-</form>
+    <form action="" method="get">
+  <p class="required">* Verplicht</p>
+  <div class="fieldSet">
+     <fieldset>
+         <legend>Persoonsgegevens</legend>
+         <label class="field" for="Naam"><span>*</span>Naam:</label><input type="text" id="Naam" name="Naam" class="textbox-300"><br />
+         <label class="field" for="Adres"><span>*</span>Adres:</label> <input type="text" id="Adres" name="Adres" class="textbox-300"><br />
+         <label class="field" for="Postcode"><span>*</span>Postcode:</label> <input type="text" id="Postcode" name="Postcode" class="textbox-300"><br />
+         <label class="field" for="Plaats"><span>*</span>Plaats:</label> <input type="text" id="Plaats" name="Plaats" class="textbox-300"><br />
+     </fieldset>
   </body>
 </html>
 

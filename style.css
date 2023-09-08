@@ -387,23 +387,32 @@ b{
    grid-column-start: 7;
   grid-column-end: 9;
 }
-
-
+div.fieldSet{
+  border: solid black thin;
+  width: 500px;
+  background-color: #ffffb0;
+}
 
 fieldset {
-  width: 500px;
+  border: none;
+  margin: 0px 0px 0px 0px;
+  padding:0;
 }
 
 legend {
   font-size: 20px;
-  color: White
+  background-color: blue;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  padding: 5px 0px 5px 0px;
 }
 
 label.field {
   text-align: right;
   width: 100px;
   float: left;
-  font-weight: bold;
+  font-weight: bold:
 }
 
 input.textbox-300 {
@@ -413,8 +422,10 @@ input.textbox-300 {
 
 fieldset br {
   clear: both;
-  padding: 5px;
+  padding: 10px;
 }
 
-plaats {color:white;
+label span, .required {
+  color: red;
+  font-weight: bold;
 }
