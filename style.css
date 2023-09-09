@@ -156,6 +156,12 @@ span {
   background-repeat: no-repeat;
   background-size: 1920px 1280px;
 }
+{
+  #vragen
+  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/images.jpg?v=1694272166194);
+  background-repeat: no-repeat;
+  background-size: 1920px 1280px;
+}
 
 /* https://www.w3schools.com/html/html_id.asp */
 
@@ -388,115 +394,45 @@ b{
   grid-column-end: 9;
   
 }
-form#myForm {
-    background: #dee;
-    width: 650px;
-    padding: 10px;
-    border: 1px solid #000;
-    margin: 0 auto;
+    div.fieldSet{
+  border: solid black thin;
+  width: 500px;
+  background-color: #ffffb0;
 }
 
-form#myForm fieldset {
-    width: 600px;
-    display: block;
-    border: 1px solid #fff;
-    padding: 5px;
-    font-family: verdana, sans-serif;
-    margin-bottom: 0.5em;
-    line-height: 1.5em;
+fieldset {
+  border: none;
+  margin: 0px 0px 0px 0px;
+  padding:0;
 }
 
-form#myForm fieldset#personal {
-    background: transparent url(https://cdn.glitch.com/fc9b283e-f9ba-4f03-b1a1-f484b4cde494%2Fcrutch.gif?v=1615536892809) no-repeat 450px 10px;
+legend {
+  font-size: 20px;
+  background-color: blue;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  padding: 5px 0px 5px 0px;
 }
 
-form#myForm fieldset#medical {
-    background: transparent url(https://cdn.glitch.com/fc9b283e-f9ba-4f03-b1a1-f484b4cde494%2Fsling.gif?v=1615536900728) no-repeat 450px 10px;
+label.field {
+  text-align: right;
+  width: 100px;
+  float: left;
+  font-weight: bold:
 }
 
-form#myForm fieldset#current {
-    background: transparent url(https://cdn.glitch.com/fc9b283e-f9ba-4f03-b1a1-f484b4cde494%2Fcold.gif?v=1615536889057) no-repeat 450px 10px;
+input.textbox-300 {
+  width: 300px;
+  float: left;
 }
 
-* html form#myForm fieldset#personal, * html form#myForm fieldset#medical {
-    background-position: 400px 20px;
+fieldset br {
+  clear: both;
+  padding: 10px;
 }
 
-* html form#myForm fieldset#current {
-    background-position: 390px 20px;
-}
-
-form#myForm fieldset#opt {
-    background: #dee;
-}
-
-form#myForm legend {
-    font-family: georgia, sans-serif;
-    font-size: 1.1em;
-    font-weight: bold;
-    border: 3px solid #fff;
-    margin-bottom: 5px;
-    padding: 3px;
-    width: 280px;
-    background: #fff url(https://cdn.glitch.com/fc9b283e-f9ba-4f03-b1a1-f484b4cde494%2Fform.gif?v=1615536896544) repeat-x center left;
-}
-
-form#myForm label {
-    clear: left;
-    display: block;
-    float: left;
-    width: 100px;
-    text-align: right;
-    padding-right: 10px;
-    color: #888;
-    margin-bottom: 0.5em;
-}
-
-form#myForm input {
-    border: 1px solid #fff;
-    background: #fff url(https://cdn.glitch.com/fc9b283e-f9ba-4f03-b1a1-f484b4cde494%2Fform.gif?v=1615536896544) repeat-x top left;
-    padding-left: 0.5em;
-    margin-bottom: 0.6em;
-}
-
-form#myForm select {
-    margin-left: 0.5em;
-}
-
-form#myForm textarea {
-    width: 500px;
-    height: 15em;
-    border: 1px solid #fff;
-    padding: 0.5em;
-    overflow: auto;
-    background: #fff url(https://cdn.glitch.com/fc9b283e-f9ba-4f03-b1a1-f484b4cde494%2Fform.gif?v=1615536896544) repeat-x bottom left;
-}
-
-form#myForm option {
-    background: #788;
-    color: #fff;
-}
-
-form#myForm optgroup {
-    background: #abb;
-    color: #000;
-    font-family: georgia, serif;
-}
-
-form#myForm optgroup option {
-    background: #9aa;
-    color: #fff;
-}
-
-form#myForm #button1, form#myForm #button2 {
-    color: #c00;
-    padding-right: 0.5em;
-    cursor: pointer;
-    width: 205px;
-    margin-left: 8px;
-}
-
-form#myForm #button1:hover, form#myForm #button2:hover {
-    background-position: center left;
-    color: #000;
+label span, .required {
+  color: red;
+  font-weight: bold;
 }
