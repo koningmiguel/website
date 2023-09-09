@@ -164,7 +164,6 @@ span {
   color: black;
 }
 
-/* https://www.w3schools.com/html/html_id.asp */
 
 h4 {
   text-align: center;
@@ -399,4 +398,7 @@ b{
 input {
 color: black 
 }
-label {color:}
+label {color:black}
+
+h5 {color:black}
+h7 {color:black}
