@@ -28,33 +28,52 @@
     <div class="home">
    
 <script>
-        function validateForm() {
-            // Valideer persoonsgegevens
-            var naam = document.getElementById("Naam").value;
-            var adres = document.getElementById("Adres").value;
-            var postcode = document.getElementById("Postcode").value;
-            var plaats = document.getElementById("Plaats").value;
+    function validateForm() {
+        // Valideer persoonsgegevens
+        var naam = document.getElementById("Naam").value;
+        var adres = document.getElementById("Adres").value;
+        var postcode = document.getElementById("Postcode").value;
+        var plaats = document.getElementById("Plaats").value;
+        var ontbrekendeGegevens = [];
 
-            if (naam === "" || adres === "" || postcode === "" || plaats === "") {
-                alert("Vul alle persoonsgegevens in.");
-                return false;
-            }
-
-            // Valideer quizantwoorden
-            var vraag1 = document.querySelector('input[name="vraag1"]:checked');
-            var vraag2 = document.querySelector('input[name="vraag2"]:checked');
-            var vraag3 = document.querySelector('input[name="vraag3"]:checked');
-            var vraag4 = document.querySelectorAll('input[name="vraag4[]"]:checked');
-            var vraag5 = document.querySelector('input[name="vraag5"]:checked');
-
-            if (!vraag1 || !vraag2 || !vraag3 || vraag4.length === 0 || !vraag5) {
-                alert("Beantwoord alle quizvragen.");
-                return false;
-            }
-
-            return true;
+        if (naam === "") {
+            ontbrekendeGegevens.push("Naam");
         }
-    </script>
+
+        if (adres === "") {
+            ontbrekendeGegevens.push("Adres");
+        }
+
+        if (postcode === "") {
+            ontbrekendeGegevens.push("Postcode");
+        }
+
+        if (plaats === "") {
+            ontbrekendeGegevens.push("Plaats");
+        }
+
+        if (ontbrekendeGegevens.length > 0) {
+            var melding = "Vul de volgende persoonsgegevens in: " + ontbrekendeGegevens.join(", ");
+            alert(melding);
+            return false;
+        }
+
+        // Valideer quizantwoorden
+        var vraag1 = document.querySelector('input[name="vraag1"]:checked');
+        var vraag2 = document.querySelector('input[name="vraag2"]:checked');
+        var vraag3 = document.querySelector('input[name="vraag3"]:checked');
+        var vraag4 = document.querySelectorAll('input[name="vraag4[]"]:checked');
+        var vraag5 = document.querySelector('input[name="vraag5"]:checked');
+
+        if (!vraag1 || !vraag2 || !vraag3 || vraag4.length === 0 || !vraag5) {
+            alert("Beantwoord alle quizvragen.");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
         <div>
 <body>
     <form action="" method="get" onsubmit="return validateForm();">
