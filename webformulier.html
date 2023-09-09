@@ -27,153 +27,86 @@
     </ul>
     <div class="home">
       <body>
+ body>
  <style>
     #myFieldset {
         color: black;
     }
 </style>
-<form
-      id="myForm"
-      name="myForm"
-      onsubmit="return validateForm()"
-      action=""
-      method="post"
-    >
-      <fieldset id="personal">
-        <legend>PERSOONLIJKE INFORMATIE </legend>
-        <label for="firstname">Voornaam: </label>
-        <input name="firstname" id="firstname" type="text" tabindex="1" />
-        <br />
-        <label for="lastname">Achternaam: </label>
-        <input name="lastname" id="lastname" type="text" tabindex="2" />
-        <br />
-        <label for="address">adres: </label>
-        <input name="address" id="address" type="text" tabindex="3" />
-        <p>...meer persoonlijke informatie...</p>
-      </fieldset>
-      <fieldset id="medical">
-        <legend>MEDISCHE GESCHIEDENIS</legend>
-        <label for="smallpox">Pokken: </label>
-        <input
-          name="illness"
-          id="smallpox"
-          type="checkbox"
-          value="smallpox"
-          tabindex="20"
-        />
-        <br /><br />
-        <label for="mumps">Bof: </label>
-        <input
-          name="illness"
-          id="mumps"
-          type="checkbox"
-          value="mumps"
-          tabindex="21"
-        />
-        <br /><br />
-        <label for="dizziness">Duizeligheid: </label>
-        <input
-          name="illness"
-          id="dizziness"
-          type="checkbox"
-          value="dizziness"
-          tabindex="22"
-        />
-        <br /><br />
-        <label for="sneezing">Niezen: </label>
-        <input
-          name="illness"
-          id="sneezing"
-          type="checkbox"
-          value="sneezing"
-          tabindex="23"
-        />
-        <br /><br />
-        <p>...meer medische geschiedenis...</p>
-      </fieldset>
-      <fieldset id="opt">
-        <legend>OPTIES</legend>
-        <select name="choice">
-          <option selected="selected" label="geen" value="none">Geen </option>
-          <optgroup label="Groep 1">
-            <option label="cg1a" value="val_1a">Selectie groep 1a </option>
-            <option label="cg1b" value="val_1b">Selectie groep 1b </option>
-            <option label="cg1c" value="val_1c">Selectie groep 1c </option>
-          </optgroup>
-          <optgroup label="Groep 2">
-            <option label="cg2a" value="val_2a">Selectie groep 2a </option>
-            <option label="cg2b" value="val_2a">Selectie groep 2b </option>
-          </optgroup>
-          <optgroup label="Groep 3">
-            <option label="cg3a" value="val_3a">Selectie groep 3a </option>
-            <option label="cg3a" value="val_3a">Selectie groep 3b </option>
-          </optgroup>
-        </select>
-      </fieldset>
-      <fieldset id="current">
-        <legend>HUIDIGE MEDICATIE</legend>
-        <p>...gebruikt u nog andere medicijnen?</p>
-        <label for="yes">Ja: </label>
-        <input
-          name="medication"
-          id="yes"
-          type="radio"
-          value="yes"
-          tabindex="35"
-        />
-        <br />
-        <label for="no">Nee: </label>
-        <input
-          name="medication"
-          id="no"
-          type="radio"
-          value="no"
-          tabindex="35"
-        />
-        <br /><br />
-        <p>
-          ...als u medicijnen gebruikt, geef dan hieronder aan welke medicijnen u gebruikt...
-        </p>
-        <textarea
-          name="current_medication"
-          tabindex="40"
-          cols="40"
-          rows="10"
-        ></textarea>
-      </fieldset>
-      <p>
-        <input id="button1" type="submit" value="Verstuur" />
-        <input id="button2" type="reset" value="Opnieuw" />
-      </p>
+<form action="" method="get">
+        <fieldset id="myFieldset">
+            <legend>Persoonsgegevens</legend>
+            Naam: <input type="text" id="Naam" name="Naam"><br />
+<br>
+
+            <legend>Webformulier Quiz</legend>
+           
+            1. Vraag 1?
+            <br />
+            <input type="radio" id="vraag1_A" name="vraag1" value="Ant1">
+            <label for="vraag1_A">Ant1</label>
+            <br />
+            <input type="radio" id="vraag1_B" name="vraag1" value="Ant2">
+            <label for="vraag1_B">Ant2</label>
+            <br />
+            <input type="radio" id="vraag1_C" name="vraag1" value="Ant3">
+            <label for="vraag1_C">Ant3</label>
+            <br />
+
+            2. Vraag 2
+            <br />
+            <input type="radio" id="vraag2_A" name="vraag2" value="Ant1">
+            <label for="vraag2_A">Ant1</label>
+            <br />
+            <input type="radio" id="vraag2_B" name="vraag2" value="Ant2">
+            <label for="vraag2_B">Ant2</label>
+            <br />
+            <input type="radio" id="vraag2_C" name="vraag2" value="Ant3">
+            <label for="vraag2_C">Ant3</label>
+            <br />
+         
+            3. Vraag 3
+            <br/>
+            <input type="radio" id="vraag3_A" name="vraag3" value="Ant1">
+            <label for="vraag3_A">Ant1</label>
+            <br/>
+            <input type="radio" id="vraag3_B" name="vraag3" value="Ant2">
+            <label for="vraag3_B">Ant2</label>
+            <br/>
+            <input type="radio" id="vraag3_C" name="vraag3" value="Ant3">
+            <label for="vraag3_C">Ant3</label>
+            <br/>
+<br>
+   
+            4. Vraag 4
+            <br/>
+            <input type="checkbox" id="vraag4_A" name="vraag4[]" value="Ant1">
+            <label for="vraag4_A">Ant1</label>
+            <br/>
+            <input type="checkbox" id="vraag4_B" name="vraag4[]" value="Ant2">
+            <label for="vraag4_B">Ant2</label>
+            <br/>
+            <input type="checkbox" id="vraag4_C" name="vraag4[]" value="Ant3">
+            <label for="vraag4_C">Ant3</label>
+            <br/>
+
+           
+            5. Vraag 5
+            <br/>
+            <input type="checkbox" id="vraag5_A" name="vraag5[]" value="Ant1">
+            <label for="vraag5_A">Ant1</label>
+            <br/>
+            <input type="checkbox" id="vraag5_B" name="vraag5[]" value="Ant2">
+            <label for="vraag5_B">Ant2</label>
+            <br/>
+            <input type="checkbox" id="vraag5_C" name="vraag5[]" value="Ant3">
+            <label for="vraag5_C">Ant3</label>
+            <br/>
+        </fieldset>
+        <br/>
+        <input type="submit" value="Klaar & Verzenden">
     </form>
-          </p>
-
-<!-- end insert content -->
-        </div>
-
-        <div class="col-sm-2 sidenav">
-          <!--
-      <div class="well">
-        <p>ADS</p>
-      </div>
-      <div class="well">
-        <p>ADS</p>
-      </div>
--->
-        </div>
-      </div>
-    </div>
-
-    <footer class="container-fluid text-center">
-      <p><a href="https://creativecommons.org/licenses/" target="_blank" title="Ga naar creativecommons.org">
-        <img src="https://cdn.glitch.com/fc9b283e-f9ba-4f03-b1a1-f484b4cde494%2Fcc-by.png?v=1609767335021" alt="CC-BY">
-        </a> Creative Commons Licenses
-      </p>
-    </footer>
-  </body>
+</body>
   </div>
   </body>
 </html>
-
-<!-- https://www.w3schools.com/html/html_lists.asp -->
-<!--https://www.w3schools.com/css/css_dropdowns.asp-->
