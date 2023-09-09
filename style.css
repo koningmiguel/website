@@ -156,11 +156,12 @@ span {
   background-repeat: no-repeat;
   background-size: 1920px 1280px;
 }
-{
-  #vragen
-  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/images.jpg?v=1694272166194);
+
+  #vragen {
+  Background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/images.jpg?v=1694272166194);
   background-repeat: no-repeat;
   background-size: 1920px 1280px;
+  color: black;
 }
 
 /* https://www.w3schools.com/html/html_id.asp */
@@ -394,45 +395,8 @@ b{
   grid-column-end: 9;
   
 }
-    div.fieldSet{
-  border: solid black thin;
-  width: 500px;
-  background-color: #ffffb0;
-}
 
-fieldset {
-  border: none;
-  margin: 0px 0px 0px 0px;
-  padding:0;
+input {
+color: black 
 }
-
-legend {
-  font-size: 20px;
-  background-color: blue;
-  font-weight: bold;
-  color: white;
-  width: 100%;
-  padding: 5px 0px 5px 0px;
-}
-
-label.field {
-  text-align: right;
-  width: 100px;
-  float: left;
-  font-weight: bold:
-}
-
-input.textbox-300 {
-  width: 300px;
-  float: left;
-}
-
-fieldset br {
-  clear: both;
-  padding: 10px;
-}
-
-label span, .required {
-  color: red;
-  font-weight: bold;
-}
+label {color:}
