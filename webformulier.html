@@ -38,6 +38,8 @@
             alert(melding);
             return false;
         }
+     
+      
 
         // Valideer quizantwoorden
         var vraag1 = document.querySelector('input[name="vraag1"]:checked');
@@ -87,6 +89,24 @@
 
         <div>
 <body>
+  <ul>
+      <li><a class="active" href="./index.html">Home</a></li>
+      <li><a href="./WieBenIk.html">Wie ben ik?</a></li>
+      <li><a href="./hobby's.html">Hobby's</a></li>
+      <li><a href="links.html">links</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="imagegalery.html">Image gallery</a></li>
+        <li class="dropdown">
+    <a href="./opdrachten.html" class="dropbtn">Opdrachten</a>
+    <div class="dropdown-content">
+      <a href="hardware.html">Hardware</a>
+      <a href="Geschiednis.html">History </a>
+      <a href="interface.html">Windows Interface</a>
+      <a href="game.html">Game development</a>
+      <a href="webformulier.html"> Web Formulier</a>
+    </div>
+  </li>
+    </ul>
     <form action="" method="get" onsubmit="return validateForm();">
         <fieldset id="myFieldset">
             <legend>Persoonsgegevens</legend>
