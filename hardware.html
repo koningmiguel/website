@@ -8,6 +8,62 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body id="opdrachten">
+      <!-- code om inspector keys weg te halen, waar de code vandaan komt https://stackoverflow.com/questions/28575722/how-can-i-block-f12-keyboard-key-in-jquery-for-all-my-pages-and-elements -->
+    <script>
+      window.onload = function () {
+        document.addEventListener(
+          "contextmenu",
+          function (e) {
+            e.preventDefault();
+          },
+          false
+        );
+        document.addEventListener(
+          "keydown",
+          function (e) {
+            // inspect I key weghalen //
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+              disabledEvent(e);
+            }
+            // inspect J key weghalen//
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+              disabledEvent(e);
+            }
+            //Inspect ctrl shift C key weghalen//
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 67) {
+              disabledEvent(e);
+            }
+            // S plus command weghalen//
+            if (
+              e.keyCode == 83 &&
+              (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)
+            ) {
+              disabledEvent(e);
+            }
+            // U key weghalen//
+            if (e.ctrlKey && e.keyCode == 85) {
+              disabledEvent(e);
+            }
+            // F12 key weghalen //
+            if (event.keyCode == 123) {
+              disabledEvent(e);
+            }
+          },
+          false
+        );
+        function disabledEvent(e) {
+          if (e.stopPropagation) {
+            e.stopPropagation();
+          } else if (window.event) {
+            window.event.cancelBubble = true;
+          }
+          e.preventDefault();
+          return false;
+        }
+      };
+    </script>
+    <!--Einde code inspector key weghalen-->
+
     <ul>
       <li><a class="active" href="./index.html">Home</a></li>
       <li><a href="./WieBenIk.html">Wie ben ik?</a></li>
