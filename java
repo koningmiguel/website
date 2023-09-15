@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="nl">
-  <head>
-    <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="UTF-8" />
-  </head>
-  <body id="vragen">
-    <!-- code om inspector keys weg te halen, waar de code vandaan komt https://stackoverflow.com/questions/28575722/how-can-i-block-f12-keyboard-key-in-jquery-for-all-my-pages-and-elements -->
-<script>
-   // Voeg event listeners toe aan de tekstvelden om de achtergrondkleur te wijzigen wanneer er tekst wordt ingevuld
+<!-- JavaScript-code -->
+  <script>
+// Voeg event listeners toe aan de tekstvelden om de achtergrondkleur te wijzigen wanneer er tekst wordt ingevuld
 document.getElementById("Naam").addEventListener("input", function() {
     if (this.value.trim() !== "") {
         this.style.backgroundColor = "white";
@@ -161,98 +152,4 @@ document.getElementById("Plaats").addEventListener("input", function() {
     }
 });
 
-</script>
-
-        <div>
-<body>
-  <ul>
-      <li><a class="active" href="./index.html">Home</a></li>
-      <li><a href="./WieBenIk.html">Wie ben ik?</a></li>
-      <li><a href="./hobby's.html">Hobby's</a></li>
-      <li><a href="links.html">links</a></li>
-      <li><a href="./contact.html">Contact</a></li>
-      <li><a href="imagegalery.html">Image gallery</a></li>
-        <li class="dropdown">
-    <a href="./opdrachten.html" class="dropbtn">Opdrachten</a>
-    <div class="dropdown-content">
-      <a href="hardware.html">Hardware</a>
-      <a href="Geschiednis.html">History </a>
-      <a href="interface.html">Windows Interface</a>
-      <a href="game.html">Game development</a>
-      <a href="webformulier.html"> Web Formulier</a>
-    </div>
-  </li>
-    </ul>
-    <form action="" method="get" onsubmit="return validateForm();">
-        <fieldset id="myFieldset">
-            <legend>Persoonsgegevens</legend>
-            <h7> Naam:</h7> <input type="text" id="Naam" name="Naam"><br />
-            <h7>Adres:</h7> <input type="text" id="Adres" name="Adres"><br />
-            <h7>Postcode:</h7> <input type="text" id="Postcode" name="Postcode"><br />
-            <h7>Plaats:</h7> <input type="text" id="Plaats" name="Plaats"><br />
-
-          <legend><h5>Quizvragen</h5> </legend>
-                <!-- Vraag 1 -->
-<h5 class="required-field">1. Wat is de hoofdstad van Frankrijk?</h5>
-<br />
-<input type="radio" id="vraag1_A" name="vraag1" value="Parijs">
-<label for="vraag1_A">Parijs</label>
-          <br/>
-<input type="radio" id="vraag1_B"  name="vraag1" value="Londen">
-<label for="vraag1_B">Londen</label>
-<br />
-<input type="radio" id="vraag1_C" name="vraag1" value="Berlijn">
-<label for="vraag1_C">Berlijn</label>
-<br />
-
-<!-- Vraag 2 -->
-<h5 class="required-field">2. Welke planeet is het dichtst bij de zon?</h5>
-<br />
-<input type="radio" id="vraag2_A" name="vraag2" value="Mars">
-<label for="vraag2_A">Mars</label>
-<br />
-
-
-           <!-- Vraag 3 -->
-<h5 class="required-field">3. Welke kleur heeft een banaan als hij rijp is?</h5>
-<input type="radio" id="vraag3_A" name="vraag3" value="Rood">
-<label for="vraag3_A">Rood</label>
-<br />
-<input type="radio" id="vraag3_B" name="vraag3" value="Blauw">
-<label for="vraag3_B">Blauw</label>
-<br />
-<input type="radio" id="vraag3_C" name="vraag3" value="Geel">
-<label for="vraag3_C">Geel</label>
-<br />
-
-<!-- Vraag 4 -->
-<h5 class="required-field">4. Welk dier leeft in het water en kan niet vliegen?</h5>
-<input type="checkbox" id="vraag4_A" name="vraag4[]" value="Vis">
-<label for="vraag4_A">Vis</label>
-<br />
-<input type="checkbox" id="vraag4_B" name="vraag4[]" value="Adelaar">
-<label for="vraag4_B">Adelaar</label>
-<br />
-<input type="checkbox" id="vraag4_C" name="vraag4[]" value="Olifant">
-<label for="vraag4_C">Olifant</label>
-<br />
-
-<!-- Vraag 5 -->
-<h5 class="required-field">5. Hoeveel dagen heeft een week?</h5>
-<input type="radio" id="vraag5_A" name="vraag5" value="5">
-<label for="vraag5_A">5</label>
-<br />
-<input type="radio" id="vraag5_B" name="vraag5" value="6">
-<label for="vraag5_B">6</label>
-<br />
-<input type="radio" id="vraag5_C" name="vraag5" value="7">
-<label for="vraag5_C">7</label>
-<br />
-
-        </fieldset>
-        <br />
-        <input type="submit" value="Verzenden">
-    </form>
-      </body>
-  </div>
-</html>
+  </script>
