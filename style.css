@@ -421,8 +421,36 @@ input[type="submit"]:hover {
     background-color: #555555;
 }
 
-/* Stijl voor rode sterretjes */
-.required-field::after {
-    content: " *";
-    color: red;
+ /* CSS voor de achtergrondkleur van tekstbalken */
+input[type="text"] {
+    background-color: white; /* Standaard achtergrondkleur voor tekstbalken */
+    border: 1px solid #cccccc; /* Rand om tekstbalken */
+    padding: 5px; /* Ruimte binnenin tekstbalken */
+}
+
+/* CSS voor verplichte velden met rode sterretjes */
+.required-field::before {
+    content: "*"; /* Rode sterretje als content vóór de tekst */
+    color: red; /* Rode kleur voor het sterretje */
+    margin-right: 5px; /* Ruimte tussen het sterretje en de tekst */
+}
+
+/* CSS om gele achtergrondkleur toe te passen op tekstbalken met fouten */
+.required-error {
+    background-color: yellow; /* Achtergrondkleur wordt geel bij fouten */
+}
+
+}
+fieldset {
+  background-color: #eeeeee;
+}
+
+legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+}
+
+input {
+  margin: 5px;
 }

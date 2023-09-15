@@ -2,13 +2,46 @@
 <html lang="nl">
   <head>
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
   </head>
-<body id="vragen">
+  <body id="vragen">
     <!-- code om inspector keys weg te halen, waar de code vandaan komt https://stackoverflow.com/questions/28575722/how-can-i-block-f12-keyboard-key-in-jquery-for-all-my-pages-and-elements -->
 <script>
+   // Voeg event listeners toe aan de tekstvelden om de achtergrondkleur te wijzigen wanneer er tekst wordt ingevuld
+document.getElementById("Naam").addEventListener("input", function() {
+    if (this.value.trim() !== "") {
+        this.style.backgroundColor = "white";
+    } else {
+        this.style.backgroundColor = "yellow";
+    }
+});
+
+document.getElementById("Adres").addEventListener("input", function() {
+    if (this.value.trim() !== "") {
+        this.style.backgroundColor = "white";
+    } else {
+        this.style.backgroundColor = "yellow";
+    }
+});
+
+document.getElementById("Postcode").addEventListener("input", function() {
+    if (this.value.trim() !== "") {
+        this.style.backgroundColor = "white";
+    } else {
+        this.style.backgroundColor = "yellow";
+    }
+});
+
+document.getElementById("Plaats").addEventListener("input", function() {
+    if (this.value.trim() !== "") {
+        this.style.backgroundColor = "white";
+    } else {
+        this.style.backgroundColor = "yellow";
+    }
+});
+
     function validateForm() {
     // Valideer persoonsgegevens
     var naam = document.getElementById("Naam").value;
@@ -95,7 +128,39 @@
 
     return true;
 }
- 
+ // Voeg event listeners toe aan de tekstvelden om de achtergrondkleur te wijzigen wanneer er tekst wordt ingevuld
+document.getElementById("Naam").addEventListener("input", function() {
+    if (this.value.trim() !== "") {
+        this.style.backgroundColor = "white";
+    } else {
+        this.style.backgroundColor = "yellow";
+    }
+});
+
+document.getElementById("Adres").addEventListener("input", function() {
+    if (this.value.trim() !== "") {
+        this.style.backgroundColor = "white";
+    } else {
+        this.style.backgroundColor = "yellow";
+    }
+});
+
+document.getElementById("Postcode").addEventListener("input", function() {
+    if (this.value.trim() !== "") {
+        this.style.backgroundColor = "white";
+    } else {
+        this.style.backgroundColor = "yellow";
+    }
+});
+
+document.getElementById("Plaats").addEventListener("input", function() {
+    if (this.value.trim() !== "") {
+        this.style.backgroundColor = "white";
+    } else {
+        this.style.backgroundColor = "yellow";
+    }
+});
+
 </script>
 
         <div>
