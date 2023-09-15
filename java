@@ -1,39 +1,5 @@
-<!-- JavaScript-code -->
-  <script>
-// Voeg event listeners toe aan de tekstvelden om de achtergrondkleur te wijzigen wanneer er tekst wordt ingevuld
-document.getElementById("Naam").addEventListener("input", function() {
-    if (this.value.trim() !== "") {
-        this.style.backgroundColor = "white";
-    } else {
-        this.style.backgroundColor = "yellow";
-    }
-});
-
-document.getElementById("Adres").addEventListener("input", function() {
-    if (this.value.trim() !== "") {
-        this.style.backgroundColor = "white";
-    } else {
-        this.style.backgroundColor = "yellow";
-    }
-});
-
-document.getElementById("Postcode").addEventListener("input", function() {
-    if (this.value.trim() !== "") {
-        this.style.backgroundColor = "white";
-    } else {
-        this.style.backgroundColor = "yellow";
-    }
-});
-
-document.getElementById("Plaats").addEventListener("input", function() {
-    if (this.value.trim() !== "") {
-        this.style.backgroundColor = "white";
-    } else {
-        this.style.backgroundColor = "yellow";
-    }
-});
-
-    function validateForm() {
+// JavaScript-code for validation
+function validateForm() {
     // Valideer persoonsgegevens
     var naam = document.getElementById("Naam").value;
     var adres = document.getElementById("Adres").value;
@@ -119,8 +85,9 @@ document.getElementById("Plaats").addEventListener("input", function() {
 
     return true;
 }
- // Voeg event listeners toe aan de tekstvelden om de achtergrondkleur te wijzigen wanneer er tekst wordt ingevuld
-document.getElementById("Naam").addEventListener("input", function() {
+
+// Voeg event listeners toe aan de tekstvelden om de achtergrondkleur te wijzigen wanneer er tekst wordt ingevuld
+document.getElementById("Naam").addEventListener("input", function () {
     if (this.value.trim() !== "") {
         this.style.backgroundColor = "white";
     } else {
@@ -128,7 +95,7 @@ document.getElementById("Naam").addEventListener("input", function() {
     }
 });
 
-document.getElementById("Adres").addEventListener("input", function() {
+document.getElementById("Adres").addEventListener("input", function () {
     if (this.value.trim() !== "") {
         this.style.backgroundColor = "white";
     } else {
@@ -136,7 +103,7 @@ document.getElementById("Adres").addEventListener("input", function() {
     }
 });
 
-document.getElementById("Postcode").addEventListener("input", function() {
+document.getElementById("Postcode").addEventListener("input", function () {
     if (this.value.trim() !== "") {
         this.style.backgroundColor = "white";
     } else {
@@ -144,12 +111,10 @@ document.getElementById("Postcode").addEventListener("input", function() {
     }
 });
 
-document.getElementById("Plaats").addEventListener("input", function() {
+document.getElementById("Plaats").addEventListener("input", function () {
     if (this.value.trim() !== "") {
         this.style.backgroundColor = "white";
     } else {
         this.style.backgroundColor = "yellow";
     }
 });
-
-  </script>

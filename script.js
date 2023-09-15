@@ -1,3 +1,4 @@
+
 // JavaScript-code for validation
 function validateForm() {
     // Valideer persoonsgegevens
@@ -86,35 +87,38 @@ function validateForm() {
     return true;
 }
 
-// Voeg event listeners toe aan de tekstvelden om de achtergrondkleur te wijzigen wanneer er tekst wordt ingevuld
+// Add event listeners for input fields
 document.getElementById("Naam").addEventListener("input", function () {
-    if (this.value.trim() !== "") {
-        this.style.backgroundColor = "white";
-    } else {
-        this.style.backgroundColor = "yellow";
-    }
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "yellow";
+  }
 });
 
 document.getElementById("Adres").addEventListener("input", function () {
-    if (this.value.trim() !== "") {
-        this.style.backgroundColor = "white";
-    } else {
-        this.style.backgroundColor = "yellow";
-    }
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "yellow";
+  }
 });
 
 document.getElementById("Postcode").addEventListener("input", function () {
-    if (this.value.trim() !== "") {
-        this.style.backgroundColor = "white";
-    } else {
-        this.style.backgroundColor = "yellow";
-    }
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "yellow";
+  }
 });
 
 document.getElementById("Plaats").addEventListener("input", function () {
-    if (this.value.trim() !== "") {
-        this.style.backgroundColor = "white";
-    } else {
-        this.style.backgroundColor = "yellow";
-    }
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "yellow";
+  }
 });
+
+// Add event listeners for other input fields
+
