@@ -397,6 +397,7 @@ b{
 
 input {
 color: black 
+    margin: 5px;
 }
 label {color:black}
 
@@ -451,6 +452,3 @@ legend {
   padding: 5px 10px;
 }
 
-input {
-  margin: 5px;
-}

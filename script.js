@@ -8,7 +8,15 @@ function validateForm() {
     var plaats = document.getElementById("Plaats").value;
     var ontbrekendeGegevens = [];
 
-    if (naam === "") {
+    
+    // Valideer quizantwoorden
+    var vraag1 = document.querySelector('input[name="vraag1"]:checked');
+    var vraag2 = document.querySelector('input[name="vraag2"]:checked');
+    var vraag3 = document.querySelector('input[name="vraag3"]:checked');
+    var vraag4 = document.querySelectorAll('input[name="vraag4[]"]:checked');
+    var vraag5 = document.querySelector('input[name="vraag5"]:checked');
+  
+  if (naam === "") {
         ontbrekendeGegevens.push("Naam");
         document.getElementById("Naam").style.backgroundColor = "yellow";
     } else {
@@ -17,7 +25,7 @@ function validateForm() {
 
     if (adres === "") {
         ontbrekendeGegevens.push("Adres");
-        document.getElementById("Adres").style.backgroundColor = "yellow";
+        document.getElementById("Adres").style.backgroundColor = "red";
     } else {
         document.getElementById("Adres").style.backgroundColor = "white";
     }
@@ -42,12 +50,7 @@ function validateForm() {
         return false;
     }
 
-    // Valideer quizantwoorden
-    var vraag1 = document.querySelector('input[name="vraag1"]:checked');
-    var vraag2 = document.querySelector('input[name="vraag2"]:checked');
-    var vraag3 = document.querySelector('input[name="vraag3"]:checked');
-    var vraag4 = document.querySelectorAll('input[name="vraag4[]"]:checked');
-    var vraag5 = document.querySelector('input[name="vraag5"]:checked');
+
 
     if (!vraag1) {
         document.querySelector('h5.required-field:nth-of-type(1)').classList.add('required-error');
@@ -119,6 +122,3 @@ document.getElementById("Plaats").addEventListener("input", function () {
     this.style.backgroundColor = "yellow";
   }
 });
-
-// Add event listeners for other input fields
-
