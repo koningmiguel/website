@@ -118,3 +118,36 @@ document.getElementById("Plaats").addEventListener("input", function () {
         this.style.backgroundColor = "yellow";
     }
 });
+
+// Add event listeners for input fields
+document.getElementById("Naam").addEventListener("input", function () {
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "yellow";
+  }
+});
+
+document.getElementById("Adres").addEventListener("input", function () {
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "yellow";
+  }
+});
+
+document.getElementById("Postcode").addEventListener("input", function () {
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "yellow";
+  }
+});
+
+document.getElementById("Plaats").addEventListener("input", function () {
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "yellow";
+  }
+});

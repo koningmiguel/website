@@ -17,11 +17,11 @@ function validateForm() {
     var vraag5 = document.querySelector('input[name="vraag5"]:checked');
   
   if (naam === "") {
-        ontbrekendeGegevens.push("Naam");
-        document.getElementById("Naam").style.backgroundColor = "yellow";
-    } else {
-        document.getElementById("Naam").style.backgroundColor = "white";
-    }
+    ontbrekendeGegevens.push("Naam");
+    document.getElementById("Naam").style.backgroundColor = "yellow";
+} else {
+    document.getElementById("Naam").style.backgroundColor = "white";
+}
 
     if (adres === "") {
         ontbrekendeGegevens.push("Adres");
@@ -49,6 +49,38 @@ function validateForm() {
         alert(melding);
         return false;
     }
+  
+document.getElementById("Naam").addEventListener("input", function () {
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white"; // Als er tekst is ingevoerd, maak de achtergrond wit
+  } else {
+    this.style.backgroundColor = "yellow"; // Als het veld leeg is, maak de achtergrond geel
+  }
+});
+
+document.getElementById("Adres").addEventListener("input", function () {
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "yellow";
+  }
+});
+
+document.getElementById("Postcode").addEventListener("input", function () {
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "yellow";
+  }
+});
+
+document.getElementById("Plaats").addEventListener("input", function () {
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "yellow";
+  }
+});
 
 
 
