@@ -89,7 +89,7 @@ function validateForm() {
         return false;
     }
 
-    // Controleer alle vragen en tel correcte antwoorden
+        // Controleer alle vragen en tel correcte antwoorden
     var juisteAntwoorden = {
         vraag1: "Parijs",
         vraag2: "Mars",
@@ -110,6 +110,7 @@ function validateForm() {
 
     var aantalCorrecteAntwoorden = 0;
     var totaalVragen = 0;
+    var aantalVolledigCorrect = 0;
 
     for (var vraag in juisteAntwoorden) {
         totaalVragen++;
@@ -129,11 +130,18 @@ function validateForm() {
             // Bereken punten op basis van het percentage correcte opties
             var punten = (correcteOpties / juisteOptiesAantal) * 100;
 
+            // Als alle opties correct zijn, voeg 100% punten toe
+            if (correcteOpties === juisteOptiesAantal) {
+                punten = 100;
+                aantalVolledigCorrect++;
+            }
+
             aantalCorrecteAntwoorden += punten;
         } else {
             // Controleer radiobutton-vragen
             if (juisteAntwoorden[vraag] === antwoorden[vraag]) {
                 aantalCorrecteAntwoorden += 100;
+                aantalVolledigCorrect++;
             }
         }
     }
@@ -151,7 +159,8 @@ function validateForm() {
 
     var popupTekst = "Succesvol ingeleverd!\n\n" +
         juisteAntwoordenTekst + "\n\n" +
-        "Je hebt in totaal " + percentageCorrect.toFixed(2) + "% van alle vragen goed beantwoord";
+        "Je hebt in totaal " + percentageCorrect.toFixed(2) + "% van alle vragen goed beantwoord.\n" +
+        "Je hebt " + aantalVolledigCorrect + " van de " + totaalVragen + " vragen foutloos beantwoord.";
 
     alert(popupTekst);
 
@@ -165,3 +174,55 @@ function arraysVergelijken(arr1, arr2) {
     }
     return true;
 }
+
+window.onload = function () {
+        document.addEventListener(
+          "contextmenu",
+          function (e) {
+            e.preventDefault();
+          },
+          false
+        );
+        document.addEventListener(
+          "keydown",
+          function (e) {
+            // inspect I key weghalen //
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+              disabledEvent(e);
+            }
+            // inspect J key weghalen//
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+              disabledEvent(e);
+            }
+            //Inspect ctrl shift C key weghalen//
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 67) {
+              disabledEvent(e);
+            }
+            // S plus command weghalen//
+            if (
+              e.keyCode == 83 &&
+              (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)
+            ) {
+              disabledEvent(e);
+            }
+            // U key weghalen//
+            if (e.ctrlKey && e.keyCode == 85) {
+              disabledEvent(e);
+            }
+            // F12 key weghalen //
+            if (event.keyCode == 123) {
+              disabledEvent(e);
+            }
+          },
+          false
+        );
+        function disabledEvent(e) {
+          if (e.stopPropagation) {
+            e.stopPropagation();
+          } else if (window.event) {
+            window.event.cancelBubble = true;
+          }
+          e.preventDefault();
+          return false;
+        }
+      };
