@@ -1,4 +1,4 @@
-// JavaScript-code for validation
+// JavaScript-code voor validatie
 function validateForm() {
     // Valideer persoonsgegevens
     var naam = document.getElementById("Naam").value;
@@ -85,7 +85,7 @@ function validateForm() {
 
     // Controleer of alle vragen zijn beantwoord
     if (!vraag1 || !vraag2 || !vraag3 || vraag4.length === 0 || vraag5.length === 0 || !vraag6) {
-        alert("Beantwoord alle quizvragen, als je het niet weet kun je alltijd gokken ;)");
+        alert("Beantwoord alle quizvragen, als je het niet weet kun je altijd gokken ;)");
         return false;
     }
 
@@ -108,52 +108,60 @@ function validateForm() {
         vraag6: vraag6.value
     };
 
-    var correcteAntwoorden = 0;
+    var aantalCorrecteAntwoorden = 0;
     var totaalVragen = 0;
 
     for (var vraag in juisteAntwoorden) {
         totaalVragen++;
         if (Array.isArray(juisteAntwoorden[vraag])) {
             // Controleer checkbox-vragen
-            if (arraysVergelijken(juisteAntwoorden[vraag], antwoorden[vraag])) {
-                correcteAntwoorden++;
+            var juisteOpties = juisteAntwoorden[vraag];
+            var gegevenOpties = antwoorden[vraag];
+            var juisteOptiesAantal = juisteOpties.length;
+            var correcteOpties = 0;
+
+            for (var i = 0; i < juisteOpties.length; i++) {
+                if (gegevenOpties.includes(juisteOpties[i])) {
+                    correcteOpties++;
+                }
             }
+
+            // Bereken punten op basis van het percentage correcte opties
+            var punten = (correcteOpties / juisteOptiesAantal) * 100;
+
+            aantalCorrecteAntwoorden += punten;
         } else {
             // Controleer radiobutton-vragen
             if (juisteAntwoorden[vraag] === antwoorden[vraag]) {
-                correcteAntwoorden++;
+                aantalCorrecteAntwoorden += 100;
             }
         }
     }
 
     // Toon een popup met juiste antwoorden en het percentage correcte antwoorden
-var juisteAntwoordenTekst = "Juiste antwoorden waren:\n" +
-    "Vraag 1: Parijs\n" +
-    "Vraag 2: Mars\n" +
-    "Vraag 3: Geel\n" +
-    "Vraag 4: Vis, Olifant\n" +
-    "Vraag 5: Rood, Geel, Blauw\n" +
-    "Vraag 6: 7";
+    var juisteAntwoordenTekst = "Juiste antwoorden waren:\n" +
+        "Vraag 1: Parijs\n" +
+        "Vraag 2: Mars\n" +
+        "Vraag 3: Geel\n" +
+        "Vraag 4: Vis, Olifant\n" +
+        "Vraag 5: Rood, Geel, Blauw\n" +
+        "Vraag 6: 7";
 
-var aantalCorrecteAntwoorden = correcteAntwoorden;
-var totaalVragen = 5; // Totaal aantal vragen
+    var percentageCorrect = (aantalCorrecteAntwoorden / (totaalVragen * 100)) * 100;
 
-var percentageCorrect = (aantalCorrecteAntwoorden / totaalVragen) * 100;
+    var popupTekst = "Succesvol ingeleverd!\n\n" +
+        juisteAntwoordenTekst + "\n\n" +
+        "Je hebt in totaal " + percentageCorrect.toFixed(2) + "% van alle vragen goed beantwoord";
 
-var popupTekst = "Succesvol ingeleverd!\n\n" +
-    juisteAntwoordenTekst + "\n\n" +
-    "Je had " + aantalCorrecteAntwoorden + " van de " + totaalVragen + " vragen correct beantwoord.\n" +
-    "Je hebt in totaal  " + percentageCorrect.toFixed(2) + "%." + " van alle vragen goed beantwoord"
-
-alert(popupTekst);
+    alert(popupTekst);
 
     return true;
 }
 
 function arraysVergelijken(arr1, arr2) {
     if (arr1.length !== arr2.length) return false;
-    for (var i = 0; i < arr1.length; i++) {
+    for (var i = 0; i < arr1.length; i++);{
         if (arr1[i] !== arr2[i]) return false;
     }
     return true;
-}; 
+}
