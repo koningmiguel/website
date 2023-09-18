@@ -175,6 +175,10 @@ function arraysVergelijken(arr1, arr2) {
     return true;
 }
 
+
+//code om inspector keys weg te halen, waar de code vandaan komt https://stackoverflow.com/questions/28575722/how-can-i-block-f12-keyboard-key-in-jquery-for-all-my-pages-and-elements//
+//Einde code inspector key weghalen//
+
 window.onload = function () {
         document.addEventListener(
           "contextmenu",

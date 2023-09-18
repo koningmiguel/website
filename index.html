@@ -5,64 +5,9 @@
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8" />
+     <script src="script.js"></script>
   </head>
 <body id="index">
-    <!-- code om inspector keys weg te halen, waar de code vandaan komt https://stackoverflow.com/questions/28575722/how-can-i-block-f12-keyboard-key-in-jquery-for-all-my-pages-and-elements -->
-    <script>
-      window.onload = function () {
-        document.addEventListener(
-          "contextmenu",
-          function (e) {
-            e.preventDefault();
-          },
-          false
-        );
-        document.addEventListener(
-          "keydown",
-          function (e) {
-            // inspect I key weghalen //
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-              disabledEvent(e);
-            }
-            // inspect J key weghalen//
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-              disabledEvent(e);
-            }
-            //Inspect ctrl shift C key weghalen//
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 67) {
-              disabledEvent(e);
-            }
-            // S plus command weghalen//
-            if (
-              e.keyCode == 83 &&
-              (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)
-            ) {
-              disabledEvent(e);
-            }
-            // U key weghalen//
-            if (e.ctrlKey && e.keyCode == 85) {
-              disabledEvent(e);
-            }
-            // F12 key weghalen //
-            if (event.keyCode == 123) {
-              disabledEvent(e);
-            }
-          },
-          false
-        );
-        function disabledEvent(e) {
-          if (e.stopPropagation) {
-            e.stopPropagation();
-          } else if (window.event) {
-            window.event.cancelBubble = true;
-          }
-          e.preventDefault();
-          return false;
-        }
-      };
-    </script>
-    <!--Einde code inspector key weghalen-->
-
    <ul>
       <li><a class="active" href="./index.html">Home</a></li>
       <li><a href="./WieBenIk.html">Wie ben ik?</a></li>
@@ -81,6 +26,7 @@
     </div>
   </li>
     </ul>
+  <div>
     <h1>Welkom op de website van M.M.H</h1>
     </div>
     <p>hallo welkom op mijn website dit is de website van Miguel Mosquera <br> op deze website ga ik onder andere dingen vertellen over wie ik ben <a href="WieBenIk.html">Wie Ben Ik</a> ik ga ook vertellen wat mijn hobby's zijn en wat ik leuk vindt om te doen dat vertel ik in <a href="hobby's.html">hobby's</a> en de rest van de buttons ik heb deze website gemaakt op de website <a href="https://glitch.com" target="_blank">glitch </a> </p>
