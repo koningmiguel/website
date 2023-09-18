@@ -25,7 +25,7 @@ function validateForm() {
 
     if (adres === "") {
         ontbrekendeGegevens.push("Adres");
-        document.getElementById("Adres").style.backgroundColor = "yellow";
+        document.getElementById("Adres").style.backgroundColor = "red";
     } else {
         document.getElementById("Adres").style.backgroundColor = "white";
     }
@@ -54,8 +54,9 @@ document.getElementById("Naam").addEventListener("input", function () {
   if (this.value.trim() !== "") {
     this.style.backgroundColor = "white"; // Als er tekst is ingevoerd, maak de achtergrond wit
   } else {
-    this.style.backgroundColor = "yellow"; // Als het veld leeg is, maak de achtergrond gee//
-  };
+    this.style.backgroundColor = "yellow"; // Als het veld leeg is, maak de achtergrond geel
+  }
+});
 
 document.getElementById("Adres").addEventListener("input", function () {
   if (this.value.trim() !== "") {
@@ -122,5 +123,34 @@ document.getElementById("Plaats").addEventListener("input", function () {
 }
 
 // Add event listeners for input fields
-                                                 
+document.getElementById("Naam").addEventListener("input", function () {
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "yellow";
+  }
+});
 
+document.getElementById("Adres").addEventListener("input", function () {
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "yellow";
+  }
+});
+
+document.getElementById("Postcode").addEventListener("input", function () {
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "yellow";
+  }
+});
+
+document.getElementById("Plaats").addEventListener("input", function () {
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "yellow";
+  }
+});
