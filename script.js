@@ -8,6 +8,37 @@ function validateForm() {
     var plaats = document.getElementById("Plaats").value;
     var ontbrekendeGegevens = [];
 
+  document.getElementById("Naam").addEventListener("input", function () {
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white"; // Als er tekst is ingevoerd, maak de achtergrond wit
+  } else {
+    this.style.backgroundColor = "yellow"; // Als het veld leeg is, maak de achtergrond geel
+  }
+});
+
+document.getElementById("Adres").addEventListener("input", function () {
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "yellow";
+  }
+});
+
+document.getElementById("Postcode").addEventListener("input", function () {
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "yellow";
+  }
+});
+
+document.getElementById("Plaats").addEventListener("input", function () {
+  if (this.value.trim() !== "") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "yellow";
+  }
+});
   
   if (naam === "") {
     ontbrekendeGegevens.push("Naam");
