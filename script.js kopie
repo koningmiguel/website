@@ -134,12 +134,13 @@ document.getElementById("Plaats").addEventListener("input", function () {
 
 function controleerAntwoorden() {
     var juisteAntwoorden = {
-        vraag1: "Parijs",
-        vraag2: "Mars",
-        vraag3: "Geel",
-        vraag4: ["Vis", "Olifant"], // Een array van juiste antwoorden
-        vraag5: "7"
-    };
+    vraag1: "Parijs",
+    vraag2: "Mars",
+    vraag3: "Geel",
+    vraag4: ["Vis", "Olifant"], // Een array van juiste antwoorden
+    vraag5: "7"
+};
+
 
     var antwoorden = {
         vraag1: document.querySelector('input[name="vraag1"]:checked'),
@@ -181,7 +182,6 @@ function arraysVergelijken(arr1, arr2) {
     }
     return true;
 }
-
 
 function toonJuisteAntwoorden() {
     var juisteAntwoorden = {
