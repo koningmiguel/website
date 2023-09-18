@@ -80,11 +80,12 @@ function validateForm() {
     var vraag2 = document.querySelector('input[name="vraag2"]:checked');
     var vraag3 = document.querySelector('input[name="vraag3"]:checked');
     var vraag4 = document.querySelectorAll('input[name="vraag4[]"]:checked');
-    var vraag5 = document.querySelector('input[name="vraag5"]:checked');
+    var vraag5 = document.querySelectorAll('input[name="vraag5[]"]:checked');
+    var vraag6 = document.querySelector('input[name="vraag6"]:checked');
 
     // Controleer of alle vragen zijn beantwoord
-    if (!vraag1 || !vraag2 || !vraag3 || vraag4.length === 0 || !vraag5) {
-        alert("Beantwoord alle quizvragen.");
+    if (!vraag1 || !vraag2 || !vraag3 || vraag4.length === 0 || vraag5.length === 0 || !vraag6) {
+        alert("Beantwoord alle quizvragen, als je het niet weet kun je alltijd gokken ;)");
         return false;
     }
 
@@ -94,7 +95,8 @@ function validateForm() {
         vraag2: "Mars",
         vraag3: "Geel",
         vraag4: ["Vis", "Olifant"],
-        vraag5: "7"
+        vraag5: ["Rood", "Geel", "Blauw"],
+        vraag6: "7"
     };
 
     var antwoorden = {
@@ -102,7 +104,8 @@ function validateForm() {
         vraag2: vraag2.value,
         vraag3: vraag3.value,
         vraag4: Array.from(vraag4, input => input.value),
-        vraag5: vraag5.value
+        vraag5: Array.from(vraag5, input => input.value),
+        vraag6: vraag6.value
     };
 
     var correcteAntwoorden = 0;
@@ -124,20 +127,25 @@ function validateForm() {
     }
 
     // Toon een popup met juiste antwoorden en het percentage correcte antwoorden
-    var juisteAntwoordenTekst = "Juiste antwoorden waren:\n" +
-        "Vraag 1: Parijs\n" +
-        "Vraag 2: Mars\n" +
-        "Vraag 3: Geel\n" +
-        "Vraag 4: Vis, Olifant\n" +
-        "Vraag 5: 7";
+var juisteAntwoordenTekst = "Juiste antwoorden waren:\n" +
+    "Vraag 1: Parijs\n" +
+    "Vraag 2: Mars\n" +
+    "Vraag 3: Geel\n" +
+    "Vraag 4: Vis, Olifant\n" +
+    "Vraag 5: Rood, Geel, Blauw\n" +
+    "Vraag 6: 7";
 
-    var percentageCorrect = (correcteAntwoorden / totaalVragen) * 100;
+var aantalCorrecteAntwoorden = correcteAntwoorden;
+var totaalVragen = 5; // Totaal aantal vragen
 
-    var popupTekst = "Succesvol ingeleverd!\n\n" +
-        juisteAntwoordenTekst + "\n\n" +
-        "Je had " + percentageCorrect.toFixed(2) + "% van de vragen correct.";
+var percentageCorrect = (aantalCorrecteAntwoorden / totaalVragen) * 100;
 
-    alert(popupTekst);
+var popupTekst = "Succesvol ingeleverd!\n\n" +
+    juisteAntwoordenTekst + "\n\n" +
+    "Je had " + aantalCorrecteAntwoorden + " van de " + totaalVragen + " vragen correct beantwoord.\n" +
+    "Je hebt in totaal  " + percentageCorrect.toFixed(2) + "%." + " van alle vragen goed beantwoord"
+
+alert(popupTekst);
 
     return true;
 }
