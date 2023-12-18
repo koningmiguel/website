@@ -209,6 +209,7 @@ b{
   padding: 10px;
   font-size: 30px;
   text-align: center;
+   
   
 }
 
@@ -343,13 +344,12 @@ b{
   text-align: center;
   
 }
-.item11{
+.item11 {
   background-color: yellow;
   border: 1px solid black;
-  padding: 10px;
+  padding: 15px;
   font-size: 30px;
   text-align: center;
-  
 }
 .item12{
   background-color: lightblue;
