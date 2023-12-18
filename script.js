@@ -92,7 +92,7 @@ function validateForm() {
         // Controleer alle vragen en tel correcte antwoorden
     var juisteAntwoorden = {
         vraag1: "Parijs",
-        vraag2: "Mercurius",
+        vraag2: "Mars",
         vraag3: "Geel",
         vraag4: ["Vis", "Olifant"],
         vraag5: ["Rood", "Geel", "Blauw"],
