@@ -383,6 +383,7 @@ b{
   font-size: 30px;
   text-align: center;
   
+
 }
 .item16{
   background-color: lightblue;
@@ -394,7 +395,6 @@ b{
   grid-column-end: 9;
   
 }
-
 input {
 color: black;
     margin: 5px;
