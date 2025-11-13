@@ -1,46 +1,50 @@
-/* ========= Root kleuren ========= */
+/* ========= (regels ~1-10) Kleuren als variabelen ========= */
+/* Daardoor kun je makkelijk overal dezelfde kleuren gebruiken */
 :root{
-  --bg: #f5e6c4;
-  --bg-accent: #f0e0b8;
-  --ink: #2b1c0a;
-  --line: #8b6f3f;
-  --card: #d4b373;
+  --bg: #f5e6c4;       /* Hoofdachtergrond binnen de app */
+  --bg-accent: #f0e0b8;/* Bovenbalk kleur */
+  --ink: #2b1c0a;      /* Tekstkleur */
+  --line: #8b6f3f;     /* Lijnen en randjes */
+  --card: #d4b373;     /* (niet meer echt als kaart gebruikt, maar als thema-kleur) */
   --card-strong: #b58f48;
 }
 
-/* ========= Pagina & “mobiel-look” frame ========= */
+/* ========= (regels ~12-32) Pagina & “mobiel-look” frame ========= */
 html, body { height: 100%; }
+
 body {
   margin: 0;
-  background: #efe2c2;
+  background: #efe2c2;                 /* Achter de app, soort muur-kleur */
   color: var(--ink);
   font-family: "Times New Roman", Times, serif;
 }
 
+/* .app = het “telefoonscherm” in het midden met border + shadow */
 .app{
-  width: 430px;
+  width: 430px;                        /* vaste breedte → lijkt op mobiel */
   min-height: 100vh;
-  margin: 0 auto;
+  margin: 0 auto;                      /* in het midden van de pagina */
   background: var(--bg);
   display: flex;
   flex-direction: column;
   border-left: 1px solid #cbb98f;
   border-right: 1px solid #cbb98f;
   box-shadow: 0 0 22px rgba(0,0,0,.18);
-  overflow: hidden;
+  overflow: hidden;                    /* alles wat uitsteekt wordt afgeknipt */
   position: relative;
 }
 
-/* ========= Topbar ========= */
+/* ========= (regels ~34-65) Topbar: zoekbalk + hamburger ========= */
 .topbar{
-  position: sticky; top: 0;
-  z-index: 50; /* menu moet HIEROVER heen */
+  position: sticky; top: 0;            /* blijft aan de bovenkant plakken */
+  z-index: 50;                         /* boven de content */
   background: var(--bg-accent);
   display: flex; align-items: center; justify-content: space-between;
   padding: 8px 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,.15);
 }
 
+/* Zoekbalk container */
 .searchbar{
   display: flex; align-items: center; gap: 8px;
   background: var(--bg);
@@ -50,6 +54,7 @@ body {
   box-shadow: inset 0 1px 0 rgba(0,0,0,.04);
 }
 
+/* Input in de zoekbalk (doet visueel iets, maar heeft geen zoekfunctie) */
 .searchbar input{
   border: none; outline: none;
   background: transparent;
@@ -58,8 +63,10 @@ body {
   color: var(--ink);
 }
 
+/* Kleine icoontjes links/rechts van de input */
 .search-ico, .mic-ico{ opacity:.6; font-size:14px; }
 
+/* Hamburgerknop met drie streepjes */
 .menu-icon{
   background: transparent; border:0; padding:6px;
   display:flex; flex-direction:column; gap:3px; cursor:pointer;
@@ -69,38 +76,43 @@ body {
   background:#2f2416; border-radius:2px;
 }
 
-/* ========= MENU OVERLAY ========= */
+/* ========= (regels ~67-103) MENU OVERLAY ========= */
+/* Donkere laag over de hele pagina, met de panel erin */
 .menu-overlay{
   position: fixed;
   top:0; left:0;
   width:100%; height:100%;
   background: rgba(0,0,0,.35);
   display:flex; justify-content:center; align-items:flex-start;
-  opacity:0;
-  pointer-events:none;
+  opacity:0;                            /* onzichtbaar totdat class "open" komt */
+  pointer-events:none;                  /* niet klikbaar als hij dicht is */
   transition:.25s ease;
-  z-index:1000; /* boven ALLES */
+  z-index:1000;                         /* boven alles, ook de topbar */
 }
 
+/* Als .open erop komt (via JS) → zichtbaar en klikbaar */
 .menu-overlay.open{
   opacity:1;
   pointer-events:auto;
 }
 
+/* Paneel dat van boven naar beneden schuift */
 .menu-panel{
   background: var(--bg);
   width: 80%;
-  margin-top:-220px; /* start boven beeld */
+  margin-top:-220px;                    /* begint buiten beeld bovenin */
   padding:20px;
   border-radius:0 0 14px 14px;
   box-shadow:0 6px 20px rgba(0,0,0,.25);
-  transition: margin-top .35s ease;
+  transition: margin-top .35s ease;     /* animatie naar beneden */
 }
 
+/* Als overlay open is → panel gaat naar top van het scherm */
 .menu-overlay.open .menu-panel{
-  margin-top:0; /* animatie omlaag */
+  margin-top:0;
 }
 
+/* Kruisje rechtsboven in het panel */
 .menu-close{
   background:none;
   border:0;
@@ -110,13 +122,13 @@ body {
   margin-bottom:10px;
 }
 
+/* Linkjes in het menu onder elkaar */
 .menu-links{
   display:flex;
   flex-direction:column;
   gap:14px;
   margin-top:14px;
 }
-
 .menu-links a{
   color:var(--ink);
   text-decoration:none;
@@ -124,15 +136,20 @@ body {
   font-size:18px;
 }
 
-/* ========= Titel + boog ========= */
+/* ========= (regels ~105-135) Titel + boog + museumafbeelding ========= */
 .hero{ text-align:center; padding:84px 16px 8px; }
+
 .title-arc{ width:260px; margin:0 auto 8px; position:relative; }
+
 .title-svg{ width:260px; height:150px; overflow:visible; }
+
+/* Boogtekst styling */
 .title-text{
   font-weight:700; font-size:18px; letter-spacing:2px;
   fill:var(--ink); transform:translateY(14px);
 }
 
+/* Kleine museumafbeelding onder de boog */
 .title-image{
   width:120px; height:120px; object-fit:cover;
   margin:-100px auto 0;
@@ -141,7 +158,7 @@ body {
   box-shadow:0 6px 14px rgba(0,0,0,.12);
 }
 
-/* ========= Navigatie ========= */
+/* ========= (regels ~137-150) Navigatie met continenten ========= */
 nav{
   display:flex; justify-content:center;
   gap:12px; flex-wrap:wrap; margin-top:8px;
@@ -152,17 +169,18 @@ nav a{
 }
 nav a:hover{ text-decoration:underline; }
 
-/* ========= Main / footer ========= */
+/* ========= (regels ~152-162) Main en footer ========= */
 main{ flex:1; text-align:center; padding:18px 12px 26px; }
 footer{ text-align:center; padding:12px 8px; }
 footer p{ margin:0; }
 
-/* ========= Helpers ========= */
+/* Kleine helper-class om dingen te verbergen */
 .hidden{ display:none; }
 
-/* ========= Horizontale tijdlijn (index) ========= */
+/* ========= (regels ~164-196) Horizontale tijdlijn (index) ========= */
 #zuid-amerika h2{ margin:8px 0 0; }
 
+/* Container scrollt horizontaal (drag) */
 .tijdlijn-container{
   position: relative;
   width: 100%;
@@ -174,6 +192,7 @@ footer p{ margin:0; }
 }
 .tijdlijn-container.grabbing{ cursor:grabbing; }
 
+/* Middenlijn van de tijdlijn (horizontaal) */
 .lijn{
   height:3px;
   background:var(--line);
@@ -182,6 +201,7 @@ footer p{ margin:0; }
   margin:0 auto;
 }
 
+/* Alle eeuwen in één rij */
 .eeuwen{
   display:flex;
   justify-content:space-between;
@@ -190,7 +210,8 @@ footer p{ margin:0; }
   min-width:700px;
 }
 
-/* ======= JAARTALLEN ZONDER BACKGROUND ======= */
+/* ======= JAARTALLEN ZONDER BACKGROUND ========= */
+/* Ziet eruit als “losse tekst”, maar hangt nog wel aan de lijn */
 .eeuw{
   background: transparent !important;
   color: var(--ink) !important;
@@ -203,11 +224,11 @@ footer p{ margin:0; }
   width: max-content;
 }
 
-/* boven / onder */
+/* Boven en onder de lijn */
 .boven{ transform: translateY(-40px); }
 .onder{ transform: translateY(40px); }
 
-/* vertical stick */
+/* Verticaal streepje van de tekst naar de lijn */
 .eeuw::before{
   content:"";
   position:absolute;
@@ -217,7 +238,7 @@ footer p{ margin:0; }
   transform:translateX(-50%);
 }
 
-/* dot */
+/* Bolletje op de lijn */
 .eeuw::after{
   content:"";
   position:absolute;
@@ -228,12 +249,13 @@ footer p{ margin:0; }
   transform:translateX(-50%);
 }
 
+/* Positie van sticks en dots onder/ boven de tekst */
 .boven::before{ top:100%; }
 .boven::after{ top: calc(100% + 26px); }
 .onder::before{ bottom:100%; }
 .onder::after{ bottom: calc(100% + 26px); }
 
-/* 20e eeuw knop */
+/* 20e eeuw is klikbaar maar lijkt qua style op de rest */
 .knop{
   background: transparent !important;
   color: var(--ink) !important;
@@ -242,9 +264,10 @@ footer p{ margin:0; }
 }
 .knop:hover{ text-decoration:underline; }
 
-/* ========= Intro + callout ========= */
+/* ========= (regels ~198-227) Intro + callout (pijl + Alexandria) ========= */
 #intro{ margin:12px 0 10px; }
 
+/* Rij met tekst + pijl + afbeelding */
 .callout{
   margin:10px auto 6px;
   display:flex; align-items:center;
@@ -252,29 +275,33 @@ footer p{ margin:0; }
   gap:12px;
 }
 
+/* “Vandaag in de geschiedenis” tekst links van de pijl */
 .today-tag{
   font-size:16px;
   font-weight:700;
   color:var(--ink);
 }
 
+/* Draaiende pijl */
 .arrow-spin{
   width:70px;
   animation:spin 1.2s ease-in-out .2s 2;
 }
 
+/* Klein plaatje van bibliotheek van Alexandrië rechts */
 .alexandria{
   width:110px; border:2px solid var(--line);
   box-shadow:0 4px 10px rgba(0,0,0,.1);
   border-radius:6px;
 }
 
+/* Animatie voor de pijl */
 @keyframes spin{
   from{transform:rotate(0)}
   to{transform:rotate(360deg)}
 }
 
-/* ========= Verticale tijdlijn (20e-eeuw) ========= */
+/* ========= (regels ~229-284) Verticale tijdlijn (20e-eeuw) ========= */
 .vtime h2{ margin:8px 0 14px; }
 
 .vtime-container{
@@ -285,6 +312,7 @@ footer p{ margin:0; }
   padding:6px 0;
 }
 
+/* Verticale lijn in het midden van de pagina */
 .vline{
   position:absolute;
   left:50%; top:0; bottom:0;
@@ -293,11 +321,12 @@ footer p{ margin:0; }
   transform:translateX(-50%);
 }
 
+/* vitem = één item links of rechts van de lijn */
 .vitem{ display:flex; position:relative; margin:18px 0; }
 .vitem.left{ justify-content:flex-start; }
 .vitem.right{ justify-content:flex-end; }
 
-/* ==== GEEN KAART RANDEN ==== */
+/* Geen kaarten met achtergrond: alleen tekst + afbeelding */
 .vcard{
   background: transparent !important;
   box-shadow:none !important;
@@ -308,30 +337,29 @@ footer p{ margin:0; }
   display:flex;
   flex-direction:column;
   align-items:center;
+  width:200px;                            /* breedte gelijk voor alle items */
 }
 
-/* breedtes consistent houden */
-.vcard{ width:200px; }
-
-/* linker / rechter marge */
+/* Linkerkaarten en rechterkaarten krijgen symmetrische marges */
 .vitem.left .vcard,
 .vitem.left a.vcard{
   margin-right:30px;
   margin-left:0;
 }
-
 .vitem.right .vcard,
 .vitem.right a.vcard{
   margin-left:30px;
   margin-right:0;
 }
 
+/* Titel boven de afbeeldingen */
 .vlabel{
   font-weight:700;
   font-size:14px;
   margin-bottom:6px;
 }
 
+/* Afbeeldingen in de tijdlijn */
 .vimg{
   width:140px;
   height:140px;
@@ -340,6 +368,7 @@ footer p{ margin:0; }
   border:2px solid var(--line);
 }
 
+/* Dots op de lijn ter hoogte van elk item */
 .vdot{
   width:10px; height:10px;
   background:var(--line);
@@ -349,6 +378,7 @@ footer p{ margin:0; }
   transform:translate(-50%,-50%);
 }
 
+/* Klein verbindingslijntje van de dot naar de kaart */
 .vitem::after{
   content:"";
   position:absolute;
@@ -357,12 +387,11 @@ footer p{ margin:0; }
   background:var(--line);
   transform:translate(-50%,-50%);
 }
-
 .vitem.right::after{
   transform: translate(-50%,-50%) rotate(180deg);
 }
 
-/* ========= Wandbord pagina ========= */
+/* ========= () Wandbord pagina styling ========= */
 .wandbord-info{
   text-align:center;
   max-width:380px;
@@ -370,17 +399,20 @@ footer p{ margin:0; }
   padding:0 8px;
 }
 
+/* Afbeelding van het wandbord */
 .wandbord-img{
   width:240px;
   margin:0 auto 18px;
   border-radius:10px;
 }
 
+/* Tekstblok eronder */
 .wandbord-tekst{
   font-size:1rem;
   line-height:1.5;
 }
 
+/* Uitklapbare “Meer”-tekst: eerst vervaagd en verborgen */
 .meer-tekst{
   opacity:.1;
   filter:blur(1px);
@@ -389,8 +421,10 @@ footer p{ margin:0; }
   transition:.7s;
 }
 
+/* Checkbox zelf verbergen (we gebruiken alleen het label) */
 input[type="checkbox"]{ display:none; }
 
+/* Klikbare “Meer”-link */
 .meer-btn{
   font-weight:700;
   cursor:pointer;
@@ -398,12 +432,13 @@ input[type="checkbox"]{ display:none; }
   text-decoration:underline;
 }
 
+/* Als de checkbox is aangevinkt → tekst zichtbaar en scherp */
 input[type="checkbox"]:checked ~ .meer-tekst{
   opacity:1; filter:blur(0);
   max-height:420px;
 }
 
-/* ========= Mobile ========= */
+/* ========= () Mobile aanpassingen ========= */
 @media(max-width:460px){
   .app{ width:100vw; border-left:0; border-right:0; }
   .searchbar input{ min-width:140px; }

@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+  <!-- (regels 1-10) Basis instellingen van de pagina -->
+  <!-- Doctype = HTML5, taal is Nederlands, titel en link naar CSS-bestand -->
   <meta charset="UTF-8" />
   <title>Virtual Time Machine</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Centrale “mobiel-look” frame: houdt borders/shadow vast en knipt alles netjes af -->
+  <!-- (regels 11-23) .app = “mobiel scherm” in het midden met border en shadow -->
+  <!-- Alles van de site zit binnen deze .app container -->
   <div class="app">
-    <!-- Zoekbalk + hamburger (sticky in de app) -->
+    <!-- (regels 14-24) Bovenste balk met zoekveld + hamburger menu -->
     <header class="topbar">
+      <!-- Zoekbalk links -->
       <div class="searchbar">
+        <!-- ⌕ en ◉ zijn gewoon icoontjes met tekst, geen echte functies -->
         <span class="search-ico">⌕</span>
         <input type="text" placeholder="Zoek in het museum..." />
         <span class="mic-ico">◉</span>
       </div>
+      <!-- Drie streepjes rechts (hamburger) om het menu te openen -->
       <button class="menu-icon" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </header>
+
+    <!-- (regels 25-36) Verborgen overlay menu dat in beeld schuift bij klik op hamburger -->
     <div class="menu-overlay">
       <div class="menu-panel">
+        <!-- Knop met kruisje om het menu weer te sluiten -->
         <button class="menu-close" aria-label="Sluiten">×</button>
+        <!-- Links naar de drie pagina’s van de site -->
         <nav class="menu-links">
           <a href="index.html">Home</a>
           <a href="20e-eeuw.html">Zuid Amerika</a>
@@ -30,26 +40,32 @@
       </div>
     </div>
 
+    <!-- (regels 38-60) Hero gedeelte met gebogen titel + museum-afbeelding + continenten -->
     <header class="hero">
-      <!-- Boogtitel + klein museumplaatje -->
+      <!-- Boog met "VIRTUAL TIME MACHINE" en daaronder een klein plaatje van een museum -->
       <div class="title-arc">
+        <!-- SVG = vector-tekening. Hier gebruiken we een pad in de vorm van een boog -->
         <svg class="title-svg" viewBox="0 0 260 150" aria-hidden="true">
           <defs>
+            <!-- Path tekent een halve cirkel waar de tekst langs wordt gezet -->
             <path id="titlePath" d="M 30 110 A 100 100 0 0 1 230 110" />
           </defs>
           <text class="title-text">
+            <!-- textPath plakt de tekst langs het pad van de boog -->
             <textPath href="#titlePath" startOffset="50%" text-anchor="middle">
               VIRTUAL TIME MACHINE
             </textPath>
           </text>
         </svg>
+        <!-- Klein museumplaatje precies onder de boog -->
         <img src="museum.png" alt="Museum" class="title-image" />
       </div>
 
-      <!-- Continenten -->
+      <!-- Navigatie met alle continenten (nu alleen Zuid-Amerika is interactief) -->
       <nav>
         <a href="#">Azië</a>
         <a href="#">Noord-Amerika</a>
+        <!-- Deze krijgt een id zodat we hem met JavaScript kunnen pakken -->
         <a href="#" id="zuid">Zuid-Amerika</a>
         <a href="#">Afrika</a>
         <a href="#">Europa</a>
@@ -58,14 +74,18 @@
       </nav>
     </header>
 
+    <!-- (regels 62-94) Main content van de homepagina -->
     <main>
-      <!-- Tijdlijn verschijnt pas na klik op Zuid-Amerika -->
+      <!-- Zuid-Amerika tijdlijn: is standaard verborgen (class "hidden") -->
       <section id="zuid-amerika" class="hidden">
         <h2>Zuid-Amerika</h2>
 
+        <!-- Container met horizontale scroll voor de eeuwen -->
         <div class="tijdlijn-container" id="drag-scroll">
+          <!-- Middenlijn van de tijdlijn -->
           <div class="lijn"></div>
 
+          <!-- Alle eeuwen: boven/onder de lijn in zigzag -->
           <div class="eeuwen">
             <div class="eeuw boven">12e eeuw</div>
             <div class="eeuw onder">13e eeuw</div>
@@ -75,16 +95,19 @@
             <div class="eeuw onder">17e eeuw</div>
             <div class="eeuw boven">18e eeuw</div>
             <div class="eeuw onder">19e eeuw</div>
+            <!-- Alleen de 20e eeuw is klikbaar, en gaat naar de detailpagina -->
             <a class="eeuw boven knop" href="20e-eeuw.html">20e eeuw</a>
           </div>
         </div>
       </section>
 
+      <!-- Korte introductietekst onder de tijdlijn -->
       <section id="intro">
         <h2>Betreed het museum</h2>
         <p>Reis door de tijd. Ontdek kunst, verhalen en werelden in beweging.</p>
       </section>
 
+      <!-- Blok met tekst "Vandaag in de geschiedenis" + draaiende pijl + afbeelding -->
       <section class="callout">
         <p class="today-tag">Vandaag in de geschiedenis</p>
         <img src="arrow.png" alt="Wijzende pijl" class="arrow-spin" />
@@ -92,52 +115,68 @@
       </section>
     </main>
 
+    <!-- Footer onderaan met drie simpele tekstlinkjes -->
     <footer>
       <p>Contact | Partners | Toegankelijkheid</p>
     </footer>
   </div>
 
+  <!-- (regels 98-143) JavaScript voor interactie: tijdlijn tonen, drag-scroll en menu -->
   <script>
-    // Alleen Zuid-Amerika opent de tijdlijn
+    // (1) Alleen Zuid-Amerika opent en sluit de tijdlijn-sectie
     const zuidBtn = document.getElementById('zuid');
     const section = document.getElementById('zuid-amerika');
     zuidBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      section.classList.toggle('hidden');
+      e.preventDefault();           // voorkomt dat de link naar "#" springt
+      section.classList.toggle('hidden'); // laat de sectie zien of verbergt 'm
     });
 
-    // Drag-scroll voor de horizontale eeuwen
+    // (2) Drag-scroll voor de tijdlijn: je klikt ingedrukt en sleept naar links/rechts
     const slider = document.getElementById('drag-scroll');
     let isDown=false, startX, scrollLeft;
+
+    // Als je de muis indrukt binnen de tijdlijn
     slider.addEventListener('mousedown', (e)=>{
-      isDown=true; slider.classList.add('grabbing');
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
+      isDown=true;
+      slider.classList.add('grabbing'); // verandert de cursor
+      startX = e.pageX - slider.offsetLeft; // startpositie van de muis
+      scrollLeft = slider.scrollLeft;       // huidige scrollpositie opslaan
     });
-    ['mouseleave','mouseup'].forEach(ev=>slider.addEventListener(ev,()=>{isDown=false; slider.classList.remove('grabbing');}));
+
+    // Als je de muis loslaat of het gebied verlaat → stoppen met draggen
+    ['mouseleave','mouseup'].forEach(ev =>
+      slider.addEventListener(ev, () => {
+        isDown=false;
+        slider.classList.remove('grabbing');
+      })
+    );
+
+    // Tijdens bewegen van de muis terwijl je ingedrukt houdt
     slider.addEventListener('mousemove',(e)=>{
-      if(!isDown) return;
+      if(!isDown) return;           // alleen als de muis is ingedrukt
       e.preventDefault();
       const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 1.2;
+      const walk = (x - startX) * 1.2; // snelheid van scrollen
       slider.scrollLeft = scrollLeft - walk;
     });
 
-  // ===== Hamburger menu open/dicht =====
-  const menuBtn = document.querySelector('.menu-icon');
+    // (3) Hamburger menu open/dicht
+    const menuBtn = document.querySelector('.menu-icon');
     const menuOverlay = document.querySelector('.menu-overlay');
     const menuClose = document.querySelector('.menu-close');
 
     if (menuBtn && menuOverlay && menuClose) {
+      // Klik op de drie streepjes → overlay zichtbaar maken
       menuBtn.addEventListener('click', () => {
         menuOverlay.classList.add('open');
       });
 
+      // Klik op kruisje → overlay verbergen
       menuClose.addEventListener('click', () => {
         menuOverlay.classList.remove('open');
       });
 
-      // klik naast het panel = sluiten
+      // Klik op de donkere achtergrond buiten het paneel → ook sluiten
       menuOverlay.addEventListener('click', (e) => {
         if (e.target === menuOverlay) {
           menuOverlay.classList.remove('open');

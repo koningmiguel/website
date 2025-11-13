@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+  <!-- Zelfde basis als index: titel + stylesheet -->
   <meta charset="UTF-8" />
   <title>20e Eeuw – Virtual Time Machine</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Zelfde app-frame zodat elke pagina er hetzelfde “mobiel” uitziet -->
   <div class="app">
+    <!-- Bovenste balk met zoekveld + hamburger -->
     <header class="topbar">
       <div class="searchbar">
         <span class="search-ico">⌕</span>
@@ -18,6 +21,7 @@
       </button>
     </header>
 
+    <!-- Overlay menu met links naar alle drie de pagina's -->
     <div class="menu-overlay">
       <div class="menu-panel">
         <button class="menu-close" aria-label="Sluiten">×</button>
@@ -29,6 +33,7 @@
       </div>
     </div>
 
+    <!-- Hero bovenaan: boogtekst + museum-afbeelding + link terug -->
     <header class="hero">
       <div class="title-arc">
         <svg class="title-svg" viewBox="0 0 260 150" aria-hidden="true">
@@ -42,19 +47,24 @@
         <img src="museum.png" alt="Museum" class="title-image" />
       </div>
 
+      <!-- Link om terug te gaan naar de hoofdpagina -->
       <nav style="margin-top:8px">
         <a href="index.html">← Terug naar het museum</a>
       </nav>
     </header>
 
+    <!-- Hoofdcontent: verticale tijdlijn met foto's links/rechts -->
     <main>
       <section class="vtime">
         <h2>Zuid-Amerika – 20e eeuw</h2>
 
+        <!-- Container met middenlijn (vline) en alle items (vitem) -->
         <div class="vtime-container">
+          <!-- Verticale lijn in het midden -->
           <div class="vline"></div>
 
-          <!-- Om-en-om links/rechts; elk item krijgt dot + connector -->
+          <!-- Elke vitem is één object met een label + afbeelding -->
+          <!-- Links en rechts wisselen steeds (class "left" of "right") -->
           <div class="vitem left">
             <div class="vcard">
               <div class="vlabel">Pre-Colombiaanse gouden sierraden</div>
@@ -71,6 +81,7 @@
             <span class="vdot"></span>
           </div>
 
+          <!-- Deze kaart is een link (a.vcard) en stuurt door naar de wandbord-pagina -->
           <div class="vitem left">
             <a href="wandbord.html" class="vcard">
               <div class="vlabel">Decoratief Wandbord – Tumi en Inca-symboliek</div>
@@ -111,38 +122,39 @@
             <span class="vdot"></span>
           </div>
 
-          <!-- voeg hier gerust meer items toe -->
+          <!-- Je zou hier nog meer items kunnen toevoegen als je wilt -->
         </div>
       </section>
     </main>
 
+    <!-- Zelfde footer onderaan -->
     <footer>
       <p>Contact | Partners | Toegankelijkheid</p>
     </footer>
   </div>
-</body>
-</html>
 
-<script>
-  const menuBtn = document.querySelector('.menu-icon');
-  const menuOverlay = document.querySelector('.menu-overlay');
-  const menuClose = document.querySelector('.menu-close');
+  <!-- Zelfde script als index voor het hamburger-menu -->
+  <script>
+    // Hamburger menu open/dicht voor deze pagina
+    const menuBtn = document.querySelector('.menu-icon');
+    const menuOverlay = document.querySelector('.menu-overlay');
+    const menuClose = document.querySelector('.menu-close');
 
-  if (menuBtn && menuOverlay && menuClose) {
-    menuBtn.addEventListener('click', () => {
-      menuOverlay.classList.add('open');
-    });
+    if (menuBtn && menuOverlay && menuClose) {
+      menuBtn.addEventListener('click', () => {
+        menuOverlay.classList.add('open');
+      });
 
-    menuClose.addEventListener('click', () => {
-      menuOverlay.classList.remove('open');
-    });
-
-    menuOverlay.addEventListener('click', (e) => {
-      if (e.target === menuOverlay) {
+      menuClose.addEventListener('click', () => {
         menuOverlay.classList.remove('open');
-      }
-    });
-  }
-</script>
+      });
+
+      menuOverlay.addEventListener('click', (e) => {
+        if (e.target === menuOverlay) {
+          menuOverlay.classList.remove('open');
+        }
+      });
+    }
+  </script>
 </body>
 </html>
