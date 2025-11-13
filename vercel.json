@@ -1,8 +1,6 @@
 {
     "rewrites": [
       { "source": "/20e-eeuw", "destination": "/20e-eeuw.html" },
-      { "source": "/wandbord", "destination": "/wandbord.html" },
-      { "source": "/20e-eeuw/", "destination": "/20e-eeuw.html" },
-      { "source": "/wandbord/", "destination": "/wandbord.html" }
+      { "source": "/wandbord", "destination": "/wandbord.html" }
     ]
   }
