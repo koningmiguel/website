@@ -1,454 +1,410 @@
-
-
-a {
-  color: white;
+/* ========= Root kleuren ========= */
+:root{
+  --bg: #f5e6c4;
+  --bg-accent: #f0e0b8;
+  --ink: #2b1c0a;
+  --line: #8b6f3f;
+  --card: #d4b373;
+  --card-strong: #b58f48;
 }
-a:visited {
-  color: white;
-}
-a:hover {
-  color: red;
-}
-/* https://www.w3schools.com/css/css_link.asp */
 
-ul {
-  list-style-type: none;
+/* ========= Pagina & “mobiel-look” frame ========= */
+html, body { height: 100%; }
+body {
   margin: 0;
-  padding: 0;
+  background: #efe2c2;
+  color: var(--ink);
+  font-family: "Times New Roman", Times, serif;
+}
+
+.app{
+  width: 430px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #cbb98f;
+  border-right: 1px solid #cbb98f;
+  box-shadow: 0 0 22px rgba(0,0,0,.18);
   overflow: hidden;
-  background-color: #ffffff00;
-  display: flex;
-  justify-content: center;
+  position: relative;
 }
 
-li {
-  float: left;
+/* ========= Topbar ========= */
+.topbar{
+  position: sticky; top: 0;
+  z-index: 50; /* menu moet HIEROVER heen */
+  background: var(--bg-accent);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
 }
 
-li a,
-.dropbtn {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.searchbar{
+  display: flex; align-items: center; gap: 8px;
+  background: var(--bg);
+  border: 1px solid #d8c79d;
+  border-radius: 22px;
+  padding: 6px 10px;
+  box-shadow: inset 0 1px 0 rgba(0,0,0,.04);
 }
 
-li a:hover,
-.dropdown:hover .dropbtn {
-  background-color: #ffffff00;
+.searchbar input{
+  border: none; outline: none;
+  background: transparent;
+  font-size: 14px;
+  min-width: 200px;
+  color: var(--ink);
 }
 
-li.dropdown {
-  display: inline-block;
+.search-ico, .mic-ico{ opacity:.6; font-size:14px; }
+
+.menu-icon{
+  background: transparent; border:0; padding:6px;
+  display:flex; flex-direction:column; gap:3px; cursor:pointer;
+}
+.menu-icon span{
+  width:18px; height:2px;
+  background:#2f2416; border-radius:2px;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+/* ========= MENU OVERLAY ========= */
+.menu-overlay{
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,.35);
+  display:flex; justify-content:center; align-items:flex-start;
+  opacity:0;
+  pointer-events:none;
+  transition:.25s ease;
+  z-index:1000; /* boven ALLES */
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+.menu-overlay.open{
+  opacity:1;
+  pointer-events:auto;
 }
 
-.dropdown-content a:hover {
-  background-color: #ffffff00;
+.menu-panel{
+  background: var(--bg);
+  width: 80%;
+  margin-top:-220px; /* start boven beeld */
+  padding:20px;
+  border-radius:0 0 14px 14px;
+  box-shadow:0 6px 20px rgba(0,0,0,.25);
+  transition: margin-top .35s ease;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-/* ik heb dit van wouter  */
-
-span {
-  color: black;
-  background-color: blue;
+.menu-overlay.open .menu-panel{
+  margin-top:0; /* animatie omlaag */
 }
 
-
-/* https://www.w3schools.com/css/css_colors.asp */
-
-.home {
-  color: white;
-  display: flex;
-  justify-content: center;
-}
-.wiebenik {
-  color: white;
-  display: flex;
-  justify-content: center;
-}
-.hobbys {
-  color: white;
-  display: flex;
-  justify-content: center;
-}
-.links {
-  color: white;
-  display: flex;
-  justify-content: center;
-}
-.contact {
-  color: white;
-  display: flex;
-  justify-content: center;
-}
-.imagegallery {
-  color: white;
-  display: flex;
-  justify-content: center;
-}
-.opdrachten {
-  color: white;
-  display: flex;
-  justify-content: center;
-}
-/* https://www.w3schools.com/html/html_classes.asp */
-
-#index {
-  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/1542409.jpg?v=1669218654254);
-  background-repeat: no-repeat;
-  background-size: 1920px 1080px;
-}
-#WBI {
-  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/image_2022-11-23_195454624.png?v=1669229697205);
-  background-repeat: no-repeat;
-  background-size: 1920px 1080px;
+.menu-close{
+  background:none;
+  border:0;
+  font-size:28px;
+  float:right;
+  cursor:pointer;
+  margin-bottom:10px;
 }
 
-#Hobby {
-  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/20519163.jpg?v=1669230574771);
-  background-repeat: no-repeat;
-  background-size: 1920px 1080px;
+.menu-links{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin-top:14px;
 }
 
-#Links {
-  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/image_2022-11-23_200442409.png?v=1669230283423);
-  background-repeat: no-repeat;
-  background-size: 1920px 1080px;
-}
-#Contact {
-  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/Sky_with_Sun_Background-1481.jpg?v=1666528216150);
-  background-repeat: no-repeat;
-  background-size: 1920px 1080px;
-}
-#IG {
-  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/2895101.webp?v=1669230722284);
-  background-repeat: no-repeat;
-  background-size: 1920px 1080px;
-}
-#opdrachten {
-  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/fb2a4a51444034672ff68bfa6bf57189.jpg?v=1669231558207);
-  background-repeat: no-repeat;
-  background-size: 1920px 6200px;
-}
-  #Geschiedenis {
-  background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/image_2022-11-23_165120596.png?v=1669218682391);
-  background-repeat: no-repeat;
-  background-size: 1920px 1280px;
+.menu-links a{
+  color:var(--ink);
+  text-decoration:none;
+  font-weight:700;
+  font-size:18px;
 }
 
-  #vragen {
-  Background: url(https://cdn.glitch.global/8b036c8e-3ff9-40c1-a39d-847565c3b20d/form.jpg?v=1694775409600);
-  background-repeat: no-repeat;
-  background-size: 1920px 1280px;
-  color: black;
+/* ========= Titel + boog ========= */
+.hero{ text-align:center; padding:84px 16px 8px; }
+.title-arc{ width:260px; margin:0 auto 8px; position:relative; }
+.title-svg{ width:260px; height:150px; overflow:visible; }
+.title-text{
+  font-weight:700; font-size:18px; letter-spacing:2px;
+  fill:var(--ink); transform:translateY(14px);
 }
 
-
-h4 {
-  text-align: center;
-  font-size: 30px;
-}
-/* Ik heb dit met wouter gedaan */
-
-p {
-color:white;
-  
-font-family: sans-serif;
-  font-size: 20px;
+.title-image{
+  width:120px; height:120px; object-fit:cover;
+  margin:-100px auto 0;
+  border-radius:10px;
+  border:2px solid var(--line);
+  box-shadow:0 6px 14px rgba(0,0,0,.12);
 }
 
-h2 {
-  display: flex;
-  justify-content: center;
-  color: white;
-  font-size: 30px;
-  
+/* ========= Navigatie ========= */
+nav{
+  display:flex; justify-content:center;
+  gap:12px; flex-wrap:wrap; margin-top:8px;
+}
+nav a{
+  color:#000; text-decoration:none;
+  font-weight:700; font-size:14px;
+}
+nav a:hover{ text-decoration:underline; }
+
+/* ========= Main / footer ========= */
+main{ flex:1; text-align:center; padding:18px 12px 26px; }
+footer{ text-align:center; padding:12px 8px; }
+footer p{ margin:0; }
+
+/* ========= Helpers ========= */
+.hidden{ display:none; }
+
+/* ========= Horizontale tijdlijn (index) ========= */
+#zuid-amerika h2{ margin:8px 0 0; }
+
+.tijdlijn-container{
+  position: relative;
+  width: 100%;
+  margin: 18px 0 4px;
+  padding: 54px 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: grab;
+}
+.tijdlijn-container.grabbing{ cursor:grabbing; }
+
+.lijn{
+  height:3px;
+  background:var(--line);
+  width:170%;
+  min-width:700px;
+  margin:0 auto;
 }
 
-b{
-  Color:white;
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: 150px 150px 150px 150px 150px 150px;
-  background-color: #ffffff00;
-  gap: 10px;
-  padding: 10px;
+.eeuwen{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:170%;
+  min-width:700px;
 }
 
-.grid-container > div {
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
+/* ======= JAARTALLEN ZONDER BACKGROUND ======= */
+.eeuw{
+  background: transparent !important;
+  color: var(--ink) !important;
+  padding: 0;
+  margin: 0 18px;
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  width: max-content;
 }
 
-.item1 {
-  background-color: lightblue;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-   
-  
+/* boven / onder */
+.boven{ transform: translateY(-40px); }
+.onder{ transform: translateY(40px); }
+
+/* vertical stick */
+.eeuw::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  width:2px; height:30px;
+  background: var(--line);
+  transform:translateX(-50%);
 }
 
-.item17 {
-  background-color: green;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-  grid-column-start: 1;
-  grid-column-end: 3;
+/* dot */
+.eeuw::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  width:8px; height:8px;
+  background: var(--line);
+  border-radius:50%;
+  transform:translateX(-50%);
 }
 
- .item19{
-  background-color: purple;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-   
+.boven::before{ top:100%; }
+.boven::after{ top: calc(100% + 26px); }
+.onder::before{ bottom:100%; }
+.onder::after{ bottom: calc(100% + 26px); }
+
+/* 20e eeuw knop */
+.knop{
+  background: transparent !important;
+  color: var(--ink) !important;
+  padding: 0;
+  text-decoration:none;
+}
+.knop:hover{ text-decoration:underline; }
+
+/* ========= Intro + callout ========= */
+#intro{ margin:12px 0 10px; }
+
+.callout{
+  margin:10px auto 6px;
+  display:flex; align-items:center;
+  justify-content:center;
+  gap:12px;
 }
 
-.item20{
-  background-color: yellow;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
+.today-tag{
+  font-size:16px;
+  font-weight:700;
+  color:var(--ink);
 }
 
-.item21{
-  background-color: purple;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
+.arrow-spin{
+  width:70px;
+  animation:spin 1.2s ease-in-out .2s 2;
 }
 
-.item22{
-  background-color: green;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
+.alexandria{
+  width:110px; border:2px solid var(--line);
+  box-shadow:0 4px 10px rgba(0,0,0,.1);
+  border-radius:6px;
 }
 
-.item18{
-  background-color: orange;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-   grid-column-start: 3;
-  grid-column-end: 5;
-   
+@keyframes spin{
+  from{transform:rotate(0)}
+  to{transform:rotate(360deg)}
 }
 
-.item2{
-  background-color: blue;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
+/* ========= Verticale tijdlijn (20e-eeuw) ========= */
+.vtime h2{ margin:8px 0 14px; }
+
+.vtime-container{
+  position:relative;
+  width:100%;
+  max-width:390px;
+  margin:0 auto 10px;
+  padding:6px 0;
 }
 
-.item3{
-  background-color: yellow;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-  grid-column: 3 / span 2
+.vline{
+  position:absolute;
+  left:50%; top:0; bottom:0;
+  width:3px;
+  background:var(--line);
+  transform:translateX(-50%);
 }
 
-.item4{
-  background-color: lightblue;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-  grid-column-start: 5;
-  grid-column-end: 7
+.vitem{ display:flex; position:relative; margin:18px 0; }
+.vitem.left{ justify-content:flex-start; }
+.vitem.right{ justify-content:flex-end; }
+
+/* ==== GEEN KAART RANDEN ==== */
+.vcard{
+  background: transparent !important;
+  box-shadow:none !important;
+  border-radius:0 !important;
+  padding:0 !important;
+  text-decoration:none;
+  color:inherit;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
-.item5{
-  background-color: green;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
- grid-column-start: 7;
-  grid-column-end: 9;
+/* breedtes consistent houden */
+.vcard{ width:200px; }
+
+/* linker / rechter marge */
+.vitem.left .vcard,
+.vitem.left a.vcard{
+  margin-right:30px;
+  margin-left:0;
 }
 
-.item6{
-  background-color: orange;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-}
-.item7{
-  background-color: green;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-  
-}
-.item8{
-  background-color: purple;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-  grid-column: 3 / span 2
-}
-.item9{
-  background-color: orange;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-  grid-column-start: 5;
-  grid-column-end: 7
-}
-.item10{
-  background-color: lightblue;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-  
-}
-.item11 {
-  background-color: yellow;
-  border: 1px solid black;
-  padding: 15px;
-  font-size: 30px;
-  text-align: center;
-}
-.item12{
-  background-color: lightblue;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-.item13{
-  background-color: blue;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-  grid-column-start: 3;
-  grid-column-end: 5;
-}
-.item14{
-  background-color: green;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-}
-.item15{
-  background-color: purple;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-  
-
-}
-.item16{
-  background-color: lightblue;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-   grid-column-start: 7;
-  grid-column-end: 9;
-  
-}
-input {
-color: black;
-    margin: 5px;
-}
-label {color:black}
-
-h5 {color:black}
-h7 {color:black}
-input[type="radio"],
-input[type="checkbox"] {
-    margin-right: 10px;
+.vitem.right .vcard,
+.vitem.right a.vcard{
+  margin-left:30px;
+  margin-right:0;
 }
 
-/* Stijl voor de verzendknop */
-input[type="submit"] {
-    background-color: #333333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.vlabel{
+  font-weight:700;
+  font-size:14px;
+  margin-bottom:6px;
 }
 
-input[type="submit"]:hover {
-    background-color: #555555;
+.vimg{
+  width:140px;
+  height:140px;
+  object-fit:cover;
+  border-radius:10px;
+  border:2px solid var(--line);
 }
 
- /* CSS voor de achtergrondkleur van tekstbalken */
-input[type="text"] {
-    background-color: white; /* Standaard achtergrondkleur voor tekstbalken */
-    border: 1px solid #cccccc; /* Rand om tekstbalken */
-    padding: 5px; /* Ruimte binnenin tekstbalken */
+.vdot{
+  width:10px; height:10px;
+  background:var(--line);
+  border-radius:50%;
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
 }
 
-/* CSS voor verplichte velden met rode sterretjes */
-.required-field::before {
-    content: "*"; /* Rode sterretje als content vóór de tekst */
-    color: red; /* Rode kleur voor het sterretje */
-    margin-right: 5px; /* Ruimte tussen het sterretje en de tekst */
+.vitem::after{
+  content:"";
+  position:absolute;
+  left:50%; top:50%;
+  width:26px; height:2px;
+  background:var(--line);
+  transform:translate(-50%,-50%);
 }
 
-/* CSS om gele achtergrondkleur toe te passen op tekstbalken met fouten */
-.required-error {
-    background-color: yellow; /* Achtergrondkleur wordt geel bij fouten */
+.vitem.right::after{
+  transform: translate(-50%,-50%) rotate(180deg);
 }
 
-
-fieldset {
-  background-color: #eeeeee;
+/* ========= Wandbord pagina ========= */
+.wandbord-info{
+  text-align:center;
+  max-width:380px;
+  margin:0 auto;
+  padding:0 8px;
 }
 
-legend {
-  background-color: gray;
-  color: white;
-  padding: 5px 10px;
+.wandbord-img{
+  width:240px;
+  margin:0 auto 18px;
+  border-radius:10px;
 }
 
+.wandbord-tekst{
+  font-size:1rem;
+  line-height:1.5;
+}
+
+.meer-tekst{
+  opacity:.1;
+  filter:blur(1px);
+  max-height:0;
+  overflow:hidden;
+  transition:.7s;
+}
+
+input[type="checkbox"]{ display:none; }
+
+.meer-btn{
+  font-weight:700;
+  cursor:pointer;
+  margin:10px 0 16px;
+  text-decoration:underline;
+}
+
+input[type="checkbox"]:checked ~ .meer-tekst{
+  opacity:1; filter:blur(0);
+  max-height:420px;
+}
+
+/* ========= Mobile ========= */
+@media(max-width:460px){
+  .app{ width:100vw; border-left:0; border-right:0; }
+  .searchbar input{ min-width:140px; }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>20e Eeuw – Virtual Time Machine</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="searchbar">
+        <span class="search-ico">⌕</span>
+        <input type="text" placeholder="Zoek in het museum..." />
+        <span class="mic-ico">◉</span>
+      </div>
+      <button class="menu-icon" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <div class="menu-overlay">
+      <div class="menu-panel">
+        <button class="menu-close" aria-label="Sluiten">×</button>
+        <nav class="menu-links">
+          <a href="index.html">Home</a>
+          <a href="20e-eeuw.html">Zuid Amerika</a>
+          <a href="wandbord.html">Wandbord</a>
+        </nav>
+      </div>
+    </div>
+
+    <header class="hero">
+      <div class="title-arc">
+        <svg class="title-svg" viewBox="0 0 260 150" aria-hidden="true">
+          <defs><path id="titlePath" d="M 30 110 A 100 100 0 0 1 230 110" /></defs>
+          <text class="title-text">
+            <textPath href="#titlePath" startOffset="50%" text-anchor="middle">
+              VIRTUAL TIME MACHINE
+            </textPath>
+          </text>
+        </svg>
+        <img src="museum.png" alt="Museum" class="title-image" />
+      </div>
+
+      <nav style="margin-top:8px">
+        <a href="index.html">← Terug naar het museum</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="vtime">
+        <h2>Zuid-Amerika – 20e eeuw</h2>
+
+        <div class="vtime-container">
+          <div class="vline"></div>
+
+          <!-- Om-en-om links/rechts; elk item krijgt dot + connector -->
+          <div class="vitem left">
+            <div class="vcard">
+              <div class="vlabel">Pre-Colombiaanse gouden sierraden</div>
+              <img src="1ste.jpg" alt="12e eeuw" class="vimg">
+            </div>
+            <span class="vdot"></span>
+          </div>
+
+          <div class="vitem right">
+            <div class="vcard">
+              <div class="vlabel">Machu Picchu – herontdekking</div>
+              <img src="2de.jpeg" alt="13e eeuw" class="vimg">
+            </div>
+            <span class="vdot"></span>
+          </div>
+
+          <div class="vitem left">
+            <a href="wandbord.html" class="vcard">
+              <div class="vlabel">Decoratief Wandbord – Tumi en Inca-symboliek</div>
+              <img src="3de.jpeg" alt="14e eeuw" class="vimg">
+            </a>
+            <span class="vdot"></span>
+          </div>
+
+          <div class="vitem right">
+            <div class="vcard">
+              <div class="vlabel">Mapuche textielkunst</div>
+              <img src="4de.jpeg" alt="15e eeuw" class="vimg">
+            </div>
+            <span class="vdot"></span>
+          </div>
+
+          <div class="vitem left">
+            <div class="vcard">
+              <div class="vlabel">Che Guevara – dagboek</div>
+              <img src="5de.jpeg" alt="16e eeuw" class="vimg">
+            </div>
+            <span class="vdot"></span>
+          </div>
+
+          <div class="vitem right">
+            <div class="vcard">
+              <div class="vlabel">Andes muziekinstrumenten</div>
+              <img src="6de.jpeg" alt="17e eeuw" class="vimg">
+            </div>
+            <span class="vdot"></span>
+          </div>
+
+          <div class="vitem left">
+            <div class="vcard">
+              <div class="vlabel">Amazonia – inheemse kunst</div>
+              <img src="7de.jpeg" alt="18e eeuw" class="vimg">
+            </div>
+            <span class="vdot"></span>
+          </div>
+
+          <!-- voeg hier gerust meer items toe -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Contact | Partners | Toegankelijkheid</p>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script>
+  const menuBtn = document.querySelector('.menu-icon');
+  const menuOverlay = document.querySelector('.menu-overlay');
+  const menuClose = document.querySelector('.menu-close');
+
+  if (menuBtn && menuOverlay && menuClose) {
+    menuBtn.addEventListener('click', () => {
+      menuOverlay.classList.add('open');
+    });
+
+    menuClose.addEventListener('click', () => {
+      menuOverlay.classList.remove('open');
+    });
+
+    menuOverlay.addEventListener('click', (e) => {
+      if (e.target === menuOverlay) {
+        menuOverlay.classList.remove('open');
+      }
+    });
+  }
+</script>
+</body>
+</html>

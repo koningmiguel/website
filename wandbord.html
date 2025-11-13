@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Decoratief Wandbord – Virtual Time Machine</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="searchbar">
+        <span class="search-ico">⌕</span>
+        <input type="text" placeholder="Zoek in het museum..." />
+        <span class="mic-ico">◉</span>
+      </div>
+      <button class="menu-icon" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <div class="menu-overlay">
+      <div class="menu-panel">
+        <button class="menu-close" aria-label="Sluiten">×</button>
+        <nav class="menu-links">
+          <a href="index.html">Home</a>
+          <a href="20e-eeuw.html">Zuid Amerika</a>
+          <a href="wandbord.html">Wandbord</a>
+        </nav>
+      </div>
+    </div>
+
+    <header class="hero">
+      <div class="title-arc">
+        <svg class="title-svg" viewBox="0 0 260 150" aria-hidden="true">
+          <defs><path id="titlePath" d="M 30 110 A 100 100 0 0 1 230 110" /></defs>
+          <text class="title-text">
+            <textPath href="#titlePath" startOffset="50%" text-anchor="middle">
+              VIRTUAL TIME MACHINE
+            </textPath>
+          </text>
+        </svg>
+        <img src="museum.png" alt="Museum" class="title-image" />
+      </div>
+
+      <nav style="margin-top:8px">
+        <a href="20e-eeuw.html">← Terug naar de 20e eeuw</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="wandbord-info">
+        <h2>Decoratief wandbord met Tumi en Inca-symboliek</h2>
+        <p><strong>Peru, 20e eeuw</strong></p>
+
+        <img src="3de.jpeg" alt="Decoratief wandbord" class="wandbord-img">
+
+        <div class="wandbord-tekst">
+          <p>
+            Dit ronde metalen wandbord toont centraal een <em>tumi</em>,
+            het ceremoniële mes uit de Andes. De afbeelding van een priester of godheid
+            met rijk gedecoreerde hoofdtooi verwijst naar rituelen en beeldtaal
+            van de pre-Columbiaanse culturen in Peru.
+          </p>
+
+          <!-- Meer-knop -->
+          <label for="meer" class="meer-btn">Meer</label>
+          <input type="checkbox" id="meer">
+
+          <div class="meer-tekst">
+            <p>
+              Hoewel dit bord in de 20e eeuw is vervaardigd als decoratief souvenir,
+              draagt het een diepe symboliek. De <em>tumi</em> stond in de Moche- en Inca-tijd
+              symbool voor macht, genezing en verbinding met het goddelijke.
+              De versierde rand met herhalende reliëfpatronen benadrukt de spirituele rijkdom.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Contact | Partners | Toegankelijkheid</p>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script>
+  const menuBtn = document.querySelector('.menu-icon');
+  const menuOverlay = document.querySelector('.menu-overlay');
+  const menuClose = document.querySelector('.menu-close');
+
+  if (menuBtn && menuOverlay && menuClose) {
+    menuBtn.addEventListener('click', () => {
+      menuOverlay.classList.add('open');
+    });
+
+    menuClose.addEventListener('click', () => {
+      menuOverlay.classList.remove('open');
+    });
+
+    menuOverlay.addEventListener('click', (e) => {
+      if (e.target === menuOverlay) {
+        menuOverlay.classList.remove('open');
+      }
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,38 +1,149 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta charset="UTF-8" />
-     <script src="script.js"></script>
-  </head>
-<body id="index">
-   <ul>
-      <li><a class="active" href="./index.html">Home</a></li>
-      <li><a href="./WieBenIk.html">Wie ben ik?</a></li>
-      <li><a href="./hobby's.html">Hobby's</a></li>
-      <li><a href="links.html">links</a></li>
-      <li><a href="./contact.html">Contact</a></li>
-      <li><a href="imagegalery.html">Image gallery</a></li>
-        <li class="dropdown">
-    <a href="./opdrachten.html" class="dropbtn">Opdrachten</a>
-    <div class="dropdown-content">
-      <a href="hardware.html">Hardware</a>
-      <a href="Geschiednis.html">History </a>
-      <a href="interface.html">Windows Interface</a>
-      <a href="game.html">Game development</a>
-      <a href="webformulier.html"> Web Formulier</a>
+<head>
+  <meta charset="UTF-8" />
+  <title>Virtual Time Machine</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Centrale “mobiel-look” frame: houdt borders/shadow vast en knipt alles netjes af -->
+  <div class="app">
+    <!-- Zoekbalk + hamburger (sticky in de app) -->
+    <header class="topbar">
+      <div class="searchbar">
+        <span class="search-ico">⌕</span>
+        <input type="text" placeholder="Zoek in het museum..." />
+        <span class="mic-ico">◉</span>
+      </div>
+      <button class="menu-icon" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+    <div class="menu-overlay">
+      <div class="menu-panel">
+        <button class="menu-close" aria-label="Sluiten">×</button>
+        <nav class="menu-links">
+          <a href="index.html">Home</a>
+          <a href="20e-eeuw.html">Zuid Amerika</a>
+          <a href="wandbord.html">Wandbord</a>
+        </nav>
+      </div>
     </div>
-  </li>
-    </ul>
-  <div>
-    <h1>Welkom op de website van M.M.H</h1>
-    </div>
-    <p>hallo welkom op mijn website dit is de website van Miguel Mosquera <br> op deze website ga ik onder andere dingen vertellen over wie ik ben <a href="WieBenIk.html">Wie Ben Ik</a> ik ga ook vertellen wat mijn hobby's zijn en wat ik leuk vindt om te doen dat vertel ik in <a href="hobby's.html">hobby's</a> en de rest van de buttons ik heb deze website gemaakt op de website <a href="https://glitch.com" target="_blank">glitch </a> </p>
 
-  </body>
+    <header class="hero">
+      <!-- Boogtitel + klein museumplaatje -->
+      <div class="title-arc">
+        <svg class="title-svg" viewBox="0 0 260 150" aria-hidden="true">
+          <defs>
+            <path id="titlePath" d="M 30 110 A 100 100 0 0 1 230 110" />
+          </defs>
+          <text class="title-text">
+            <textPath href="#titlePath" startOffset="50%" text-anchor="middle">
+              VIRTUAL TIME MACHINE
+            </textPath>
+          </text>
+        </svg>
+        <img src="museum.png" alt="Museum" class="title-image" />
+      </div>
+
+      <!-- Continenten -->
+      <nav>
+        <a href="#">Azië</a>
+        <a href="#">Noord-Amerika</a>
+        <a href="#" id="zuid">Zuid-Amerika</a>
+        <a href="#">Afrika</a>
+        <a href="#">Europa</a>
+        <a href="#">Oceanië</a>
+        <a href="#">Antarctica</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Tijdlijn verschijnt pas na klik op Zuid-Amerika -->
+      <section id="zuid-amerika" class="hidden">
+        <h2>Zuid-Amerika</h2>
+
+        <div class="tijdlijn-container" id="drag-scroll">
+          <div class="lijn"></div>
+
+          <div class="eeuwen">
+            <div class="eeuw boven">12e eeuw</div>
+            <div class="eeuw onder">13e eeuw</div>
+            <div class="eeuw boven">14e eeuw</div>
+            <div class="eeuw onder">15e eeuw</div>
+            <div class="eeuw boven">16e eeuw</div>
+            <div class="eeuw onder">17e eeuw</div>
+            <div class="eeuw boven">18e eeuw</div>
+            <div class="eeuw onder">19e eeuw</div>
+            <a class="eeuw boven knop" href="20e-eeuw.html">20e eeuw</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="intro">
+        <h2>Betreed het museum</h2>
+        <p>Reis door de tijd. Ontdek kunst, verhalen en werelden in beweging.</p>
+      </section>
+
+      <section class="callout">
+        <p class="today-tag">Vandaag in de geschiedenis</p>
+        <img src="arrow.png" alt="Wijzende pijl" class="arrow-spin" />
+        <img src="alexandria.png" alt="Bibliotheek van Alexandrië" class="alexandria" />
+      </section>
+    </main>
+
+    <footer>
+      <p>Contact | Partners | Toegankelijkheid</p>
+    </footer>
+  </div>
+
+  <script>
+    // Alleen Zuid-Amerika opent de tijdlijn
+    const zuidBtn = document.getElementById('zuid');
+    const section = document.getElementById('zuid-amerika');
+    zuidBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      section.classList.toggle('hidden');
+    });
+
+    // Drag-scroll voor de horizontale eeuwen
+    const slider = document.getElementById('drag-scroll');
+    let isDown=false, startX, scrollLeft;
+    slider.addEventListener('mousedown', (e)=>{
+      isDown=true; slider.classList.add('grabbing');
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+    ['mouseleave','mouseup'].forEach(ev=>slider.addEventListener(ev,()=>{isDown=false; slider.classList.remove('grabbing');}));
+    slider.addEventListener('mousemove',(e)=>{
+      if(!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 1.2;
+      slider.scrollLeft = scrollLeft - walk;
+    });
+
+  // ===== Hamburger menu open/dicht =====
+  const menuBtn = document.querySelector('.menu-icon');
+    const menuOverlay = document.querySelector('.menu-overlay');
+    const menuClose = document.querySelector('.menu-close');
+
+    if (menuBtn && menuOverlay && menuClose) {
+      menuBtn.addEventListener('click', () => {
+        menuOverlay.classList.add('open');
+      });
+
+      menuClose.addEventListener('click', () => {
+        menuOverlay.classList.remove('open');
+      });
+
+      // klik naast het panel = sluiten
+      menuOverlay.addEventListener('click', (e) => {
+        if (e.target === menuOverlay) {
+          menuOverlay.classList.remove('open');
+        }
+      });
+    }
+  </script>
+</body>
 </html>
-
-<!-- https://www.w3schools.com/html/html_lists.asp -->
-<!--https://www.w3schools.com/css/css_dropdowns.asp-->
